@@ -9,122 +9,143 @@
     <script src="config.js"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-        .is-unowned { filter: brightness(0.5); }
-        .icon-grayscale { filter: grayscale(100%) brightness(0.6) contrast(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important; opacity: 0.8; }
-        .unowned-mask {background-color: rgba(0, 0, 0, 0.3); /* 50% 黑色遮罩 */
-                       transition: all 0.3s ease;}
-        .icon-dimmed {filter: brightness(0.6) saturate(0.8);
-                      opacity: 0.7;}
-        /* 响应式图标 */
-        .rarity-icon { height: 18px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); transition: all 0.3s; }
-        .attr-icon { height: 24px; width: auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9)); z-index: 40; transition: all 0.3s; }
-        @media (min-width: 640px) {
-            .rarity-icon { height: 26px; }
-            .attr-icon { height: 36px; }
-        }
-        /* 骨架屏动画 */
-        @keyframes skeleton-loading {
-            0% { background-color: #0f172a; }
-            50% { background-color: #1e293b; }
-            100% { background-color: #0f172a; }
-        }
-        .skeleton { animation: skeleton-loading 1.5s infinite ease-in-out; }
+        
+        /* 状态样式 */
+        .is-unowned { filter: brightness(0.4); }
+        .unowned-mask { background-color: rgba(0, 0, 0, 0.3); }
+        .icon-dimmed { filter: brightness(0.6) saturate(0.8); opacity: 0.7; }
+        
+        .rarity-icon { height: 18px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); }
+        .attr-icon { height: 24px; width: auto; z-index: 40; }
+        @media (min-width: 640px) { .rarity-icon { height: 26px; } .attr-icon { height: 36px; } }
 
-        /* 图片懒加载淡入 */
-        .card-img { opacity: 0; transition: opacity 0.6s ease-out, filter 0.3s; }
+        /* 扁平风格筛选按钮 */
+        .filter-btn {
+            height: 36px; min-width: 72px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 6px; font-weight: 800; font-size: 11px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* 稀有度颜色 */
+        .btn-ssr-active {
+            background: linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7, #facc15);
+            color: white; border: none; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        .btn-sr-active {
+            background: linear-gradient(180deg, #fbbf24, #d97706);
+            color: #422006; border: none; box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+
+        /* 属性颜色：扁平风格 */
+        .btn-vo-active { background-color: #ef4444; color: white; border: none; }
+        .btn-da-active { background-color: #3b82f6; color: white; border: none; }
+        .btn-vi-active { background-color: #eab308; color: #422006; border: none; }
+        .btn-as-active { background-color: #22c55e; color: white; border: none; }
+
+        .btn-inactive { background-color: #1e293b; color: #64748b; }
+
+        .card-img { opacity: 0; transition: opacity 0.4s ease-out; }
         .card-img-loaded { opacity: 1 !important; }
-
-        .lvl-text { text-shadow: 0 0 10px rgba(0,0,0,0.9), 0 0 20px rgba(99, 102, 241, 0.4); font-family: 'Arial Black', sans-serif; }
-        .tap-feedback:active { background: rgba(255,255,255,0.08); }
-        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #6366f1; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .lvl-text { text-shadow: 0 0 10px rgba(0,0,0,0.9); font-family: 'Arial Black', sans-serif; }
+        .tap-feedback:active { background: rgba(255,255,255,0.1); }
+        
+        .skeleton { background-color: #0f172a; animation: pulse 2s infinite; }
+        @keyframes pulse { 50% { opacity: .5; } }
     </style>
 </head>
 <body class="antialiased select-none">
     <div id="app" class="max-w-[1600px] mx-auto px-2 py-4 sm:px-4 sm:py-8">
         
-        <header class="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+        <header class="mb-6 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div>
-                <h1 class="text-2xl sm:text-3xl font-black text-indigo-500 tracking-tighter mb-2 sm:mb-4">学园偶像大师 BOX分享工具</h1>
+                <h1 class="text-2xl sm:text-3xl font-black text-indigo-500 tracking-tighter mb-4">学园偶像大师 BOX分享工具</h1>
                 <div class="flex gap-2">
-                    <button @click="importCode" class="text-[10px] sm:text-[11px] bg-indigo-900/50 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-indigo-300 hover:bg-indigo-800 hover:text-white transition">导入数据</button>
-                    <button @click="resetData" class="text-[10px] sm:text-[11px] bg-red-900/50 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-red-300 hover:bg-red-800 hover:text-white transition">清空选择</button>
+                    <button @click="importCode" class="text-[10px] bg-slate-800 px-3 py-1.5 rounded-lg text-slate-300 hover:bg-slate-700 transition">导入代码</button>
+                    <button @click="resetData" class="text-[10px] bg-red-950/30 px-3 py-1.5 rounded-lg text-red-400 hover:bg-red-900/50 transition">清空数据</button>
                 </div>
-                <div class="mt-3 text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-widest">当前已点亮 {{ ownedCount }} 张卡片</div>
             </div>
             
-            <div class="flex flex-col items-end gap-3 w-full md:w-auto">
+            <div class="flex flex-col items-end gap-3 w-full lg:w-auto">
                 <button @click="generateSummaryImage" :disabled="isGenerating || ownedCount === 0"
-                        class="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-700 text-white px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl font-bold transition w-full md:w-auto text-sm sm:text-base">
-                    <div v-if="isGenerating" class="loader"></div>
+                        class="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-700 text-white px-8 py-3 rounded-xl font-bold transition w-full lg:w-auto shadow-xl">
+                    <span v-if="isGenerating" class="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></span>
                     <span>{{ isGenerating ? '正在绘图...' : '生成汇总长图' }}</span>
                 </button>
-                <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 cursor-pointer w-full md:max-w-md group relative">
-                    <div class="text-[8px] sm:text-[9px] text-slate-500 mb-1 uppercase tracking-tighter">点击区域复制导出代码</div>
-                    <div class="font-mono text-[9px] sm:text-[10px] text-indigo-400 break-all truncate group-hover:text-indigo-300">
-                        {{ exportString || '尚未点亮任何卡片...' }}
-                    </div>
+                <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer w-full lg:max-w-md group relative">
+                    <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">导出代码 (点击复制)</div>
+                    <div class="font-mono text-[10px] text-indigo-400 truncate">{{ exportString || '尚未点亮卡片...' }}</div>
                 </div>
             </div>
         </header>
 
-        <div class="mb-6 flex items-center gap-3 bg-indigo-500/10 border-l-4 border-indigo-500 p-3 sm:p-4 rounded-r-xl">
-            <div class="bg-indigo-500 text-white p-1 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                </svg>
-            </div>
-            <p class="text-xs sm:text-sm text-indigo-200 font-medium">
-                操作说明：点击卡片<span class="text-white font-bold mx-1 text-sm">左半部分</span>减少等级/关闭，点击<span class="text-white font-bold mx-1 text-sm">右半部分</span>增加等级。
+        <div class="bg-slate-900/60 p-3 sm:p-4 rounded-2xl border border-slate-800/50 mb-6 flex flex-wrap items-center gap-2 sm:gap-3">
+            <button @click="toggleRarityFilter('3')" :class="[selectedRarities.includes('3') ? 'btn-ssr-active' : 'btn-inactive']" class="filter-btn">SSR</button>
+            <button @click="toggleRarityFilter('2')" :class="[selectedRarities.includes('2') ? 'btn-sr-active' : 'btn-inactive']" class="filter-btn">SR</button>
+            
+            <div class="h-6 w-px bg-slate-800 mx-1"></div>
+
+            <button @click="toggleFilter('vo')" :class="[selectedAttrs.includes('vo') ? 'btn-vo-active' : 'btn-inactive']" class="filter-btn">VOCAL</button>
+            <button @click="toggleFilter('da')" :class="[selectedAttrs.includes('da') ? 'btn-da-active' : 'btn-inactive']" class="filter-btn">DANCE</button>
+            <button @click="toggleFilter('vi')" :class="[selectedAttrs.includes('vi') ? 'btn-vi-active' : 'btn-inactive']" class="filter-btn">VISUAL</button>
+            <button @click="toggleFilter('as')" :class="[selectedAttrs.includes('as') ? 'btn-as-active' : 'btn-inactive']" class="filter-btn">ASSIST</button>
+
+            <button v-if="selectedAttrs.length > 0 || selectedRarities.length > 0" @click="clearAllFilters" class="ml-auto text-[10px] font-bold text-slate-500 hover:text-red-400 transition-colors">RESET ✕</button>
+        </div>
+
+        <div class="flex items-center gap-3 bg-indigo-500/5 border border-indigo-500/20 p-3 rounded-xl mb-6">
+            <p class="text-xs text-indigo-200/80">
+                操作：点击卡片左侧降低、右侧增加等级，<span class="text-white font-bold underline decoration-indigo-500 underline-offset-4">长按卡片右侧</span>直接满级。
             </p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-5">
-            <div v-for="card in cards" :key="card.id"
-                 class="relative aspect-video rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl sm:shadow-2xl"
-                 :class="{ 'skeleton': !card.loaded }">
-                <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'"
-                     loading="lazy"
-                     @load="card.loaded = true"
-                     :class="[
-                         'w-full h-full object-cover card-img',
-                         card.loaded ? 'card-img-loaded' : '',
-                         card.breakLevel === -1 ? 'is-unowned' : ''
-                     ]">
-
-                <div v-if="card.breakLevel === -1" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-6">
+            <div v-for="card in filteredCards" :key="card.rarity + '-' + card.id" 
+                 class="relative aspect-video rounded-xl sm:rounded-[2rem] overflow-hidden bg-slate-950 border border-slate-800 transition-transform active:scale-[0.98]">
+                
+                <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
+                     loading="lazy" @load="card.loaded = true"
+                     :class="['w-full h-full object-cover card-img', card.loaded ? 'card-img-loaded' : '', card.breakLevel === -1 ? 'is-unowned' : '']">
+                
+                <div v-if="card.breakLevel === -1 && card.loaded" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
 
                 <div class="absolute inset-0 flex z-30" v-if="card.loaded">
-                    <div @click="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
-                    <div @click="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
+                    <div @click.stop="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
+                    <div @click.stop="changeLevel(card, 1)" 
+                         @mousedown="startLongPress(card)" 
+                         @touchstart.passive="startLongPress(card)" 
+                         @mouseup="endLongPress" 
+                         @touchend="endLongPress" 
+                         @mouseleave="endLongPress"
+                         class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                 </div>
 
-                <div class="absolute top-2 left-2 sm:top-4 sm:left-4 z-20" v-if="card.loaded">
-                    <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'"
+                <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20" v-if="card.loaded">
+                    <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
                          :class="['rarity-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
                 </div>
-
-                <div class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 z-40" v-if="card.loaded">
-                    <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'"
+                <div class="absolute top-2 right-2 sm:top-4 sm:right-4 z-40" v-if="card.loaded">
+                    <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
                          :class="['attr-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
                 </div>
 
-                <div class="absolute bottom-2 left-3 sm:bottom-4 sm:left-5 z-20" v-if="card.loaded">
-                    <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter"
-                         :class="card.breakLevel === -1 ? 'text-slate-500' : 'text-white'">
+                <div class="absolute bottom-3 left-4 sm:bottom-5 sm:left-6 z-20" v-if="card.loaded">
+                    <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-600' : 'text-white'">
                         {{ getLevelDisplay(card) }}
                     </div>
                 </div>
             </div>
+        </div>
 
-        <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90" @click.self="showModal = false">
-            <div class="bg-slate-900 p-4 rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-800">
+        <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95" @click.self="showModal = false">
+            <div class="bg-slate-900 p-5 rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-800">
                 <div class="flex justify-between items-center mb-4 text-white font-bold px-2">
-                    <h3 class="text-sm sm:text-base">汇总长图已生成 (长按保存)</h3>
-                    <button @click="showModal = false" class="text-slate-400 hover:text-white text-2xl">✕</button>
+                    <span class="text-sm">生成的汇总图 (长按保存)</span>
+                    <button @click="showModal = false" class="bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center hover:text-red-400">✕</button>
                 </div>
-                <div class="flex-1 overflow-y-auto bg-black rounded-xl p-2">
-                    <img :src="generatedImageSrc" class="max-w-full mx-auto">
+                <div class="flex-1 overflow-y-auto bg-black rounded-2xl p-2 text-center">
+                    <img :src="generatedImageSrc" class="max-w-full mx-auto rounded-lg shadow-2xl">
                 </div>
             </div>
         </div>
@@ -132,113 +153,114 @@
 
     <script>
         const { createApp } = Vue;
-        const STORAGE_KEY = 'gakuen_box_global_data';
+        const STORAGE_KEY = 'gakuen_box_data_v3';
 
         createApp({
-            data() { return { cards: [], showModal: false, generatedImageSrc: null, isGenerating: false } },
+            data() { 
+                return { 
+                    cards: [], showModal: false, generatedImageSrc: null, 
+                    isGenerating: false, selectedAttrs: [], selectedRarities: [],
+                    longPressTimer: null, isLongPressActive: false
+                } 
+            },
             computed: {
                 ownedCount() { return this.cards.filter(c => c.breakLevel >= 0).length; },
-                exportString() { return this.cards.filter(c => c.breakLevel >= 0).map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); }
+                exportString() { 
+                    return [...this.cards].filter(c => c.breakLevel >= 0)
+                        .sort((a, b) => (Number(b.rarity) - Number(a.rarity)) || (Number(b.id) - Number(a.id)))
+                        .map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); 
+                },
+                
+                // 彻底修复排序与重复逻辑
+                filteredCards() {
+                    let result = [...this.cards];
+                    
+                    // 1. 过滤
+                    if (this.selectedRarities.length > 0) result = result.filter(c => this.selectedRarities.includes(c.rarity));
+                    if (this.selectedAttrs.length > 0) result = result.filter(c => c.attribute && this.selectedAttrs.includes(c.attribute));
+                    
+                    // 2. 确定性排序 (SSR > SR, ID由大到小)
+                    return result.sort((a, b) => {
+                        const rA = Number(a.rarity);
+                        const rB = Number(b.rarity);
+                        if (rB !== rA) return rB - rA;
+                        
+                        const idA = Number(a.id);
+                        const idB = Number(b.id);
+                        return idB - idA;
+                    });
+                }
             },
             methods: {
                 getLevelDisplay(card) {
                     const lv = card.breakLevel;
                     if (lv === -1) return 'OFF';
-                    if (card.rarity === '3') {
-                        const m = { 0:'LV.40', 1:'LV.45', 2:'LV.50', 3:'LV.55', 4:'LV.60' };
-                        return m[lv];
-                    } else {
-                        const m = { 0:'LV.30', 1:'LV.35', 2:'LV.40', 3:'LV.45', 4:'LV.50' };
-                        return m[lv];
-                    }
+                    const base = card.rarity === '3' ? 40 : 30;
+                    return `LV.${base + (lv * 5)}`;
                 },
-                
-                init() {
-                    const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-                    const allCards = [];
-                    for (const [attr, rarities] of Object.entries(CARD_CONFIG)) {
-                        for (const [rarity, ids] of Object.entries(rarities)) {
-                            ids.forEach(id => {
-                                allCards.push({
-                                    id: id,
-                                    rarity: rarity,
-                                    breakLevel: localData[id] !== undefined ? localData[id] : -1,
-                                    attribute: attr,
-                                    loaded: false
-                                });
-                            });
-                        }
-                    }
-                    this.cards = allCards.sort((a, b) => (parseInt(b.rarity) - parseInt(a.rarity)) || (parseInt(b.id) - parseInt(a.id)));
-                },
-
-                importCode() {
-                    const code = prompt("请粘贴导出的代码字符串：");
-                    if (!code || code.trim() === "") return;
-                    try {
-                        const itemArray = code.split(',');
-                        const importMap = {};
-                        itemArray.forEach(item => {
-                            const parts = item.split('-');
-                            if (parts.length === 3) {
-                                const [rarity, id, lv] = parts;
-                                importMap[id.padStart(4, '0')] = parseInt(lv);
-                            }
-                        });
-                        this.cards.forEach(card => {
-                            card.breakLevel = importMap[card.id] !== undefined ? importMap[card.id] : -1;
-                        });
+                startLongPress(card) {
+                    this.isLongPressActive = false;
+                    this.longPressTimer = setTimeout(() => {
+                        this.isLongPressActive = true;
+                        card.breakLevel = 4;
                         this.saveToLocal();
-                        alert("数据继承成功！");
-                    } catch (e) {
-                        alert("导入失败：请确保代码格式正确");
-                    }
+                        if (window.navigator.vibrate) window.navigator.vibrate(60);
+                    }, 600);
                 },
-
-                resetData() {
-                    if (confirm("确定要清空所有已选择的卡片吗？此操作无法恢复。")) {
-                        this.cards.forEach(card => card.breakLevel = -1);
-                        this.saveToLocal();
-                    }
+                endLongPress() {
+                    clearTimeout(this.longPressTimer);
+                    setTimeout(() => { this.isLongPressActive = false; }, 100);
                 },
-
-                async changeLevel(card, step) {
+                changeLevel(card, step) {
+                    if (this.isLongPressActive) return;
                     let next = card.breakLevel + step;
                     if (next > 4) next = 4;
                     if (next < -1) next = -1;
-                    if (card.breakLevel !== next) { 
-                        card.breakLevel = next; 
-                        this.saveToLocal();
-                    }
+                    if (card.breakLevel !== next) { card.breakLevel = next; this.saveToLocal(); }
                 },
-
+                init() {
+                    const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+                    const allCards = [];
+                    // 确保 CARD_CONFIG 遍历时 ID 以字符串形式存储，防止位值混乱
+                    for (const [attr, rarities] of Object.entries(CARD_CONFIG)) {
+                        for (const [rarity, ids] of Object.entries(rarities)) {
+                            ids.forEach(id => {
+                                allCards.push({ id: String(id), rarity: String(rarity), breakLevel: localData[id] !== undefined ? localData[id] : -1, attribute: attr, loaded: false });
+                            });
+                        }
+                    }
+                    this.cards = allCards;
+                },
+                toggleFilter(attr) {
+                    const idx = this.selectedAttrs.indexOf(attr);
+                    if (idx > -1) this.selectedAttrs.splice(idx, 1);
+                    else this.selectedAttrs.push(attr);
+                },
+                toggleRarityFilter(r) {
+                    const idx = this.selectedRarities.indexOf(r);
+                    if (idx > -1) this.selectedRarities.splice(idx, 1);
+                    else this.selectedRarities.push(r);
+                },
+                clearAllFilters() { this.selectedAttrs = []; this.selectedRarities = []; },
                 saveToLocal() {
                     const storage = {};
-                    this.cards.forEach(c => {
-                        if (c.breakLevel !== -1) storage[c.id] = c.breakLevel;
-                    });
+                    this.cards.forEach(c => { if (c.breakLevel !== -1) storage[c.id] = c.breakLevel; });
                     localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
                 },
-
-                async copyResult() {
-                    const text = this.exportString;
-                    if (!text) return alert("没有可导出的数据");
+                importCode() {
+                    const code = prompt("粘贴代码：");
+                    if (!code) return;
                     try {
-                        await navigator.clipboard.writeText(text);
-                        alert("代码已成功复制到剪贴板");
-                    } catch (e) {
-                        const input = document.createElement('textarea');
-                        input.value = text; document.body.appendChild(input);
-                        input.select(); document.execCommand('copy');
-                        document.body.removeChild(input);
-                        alert("代码已复制");
-                    }
+                        const map = {};
+                        code.split(',').forEach(s => { const parts = s.split('-'); map[parts[1].padStart(4, '0')] = parseInt(parts[2]); });
+                        this.cards.forEach(c => { c.breakLevel = map[c.id] !== undefined ? map[c.id] : -1; });
+                        this.saveToLocal();
+                    } catch (e) { alert("Format Error"); }
                 },
-                
-                downloadImg(src) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); },
-                
+                resetData() { if (confirm("确定重置？")) { this.cards.forEach(c => c.breakLevel = -1); this.saveToLocal(); } },
+                downloadImg(src) { return new Promise((res, rej) => { const i = new Image(); i.crossOrigin="anonymous"; i.onload = () => res(i); i.onerror = rej; i.src = src; }); },
                 async generateSummaryImage() {
-                    const list = this.cards.filter(c => c.breakLevel >= 0); 
+                    const list = this.filteredCards.filter(c => c.breakLevel >= 0);
                     if (list.length === 0) return;
                     this.isGenerating = true;
                     try {
@@ -248,7 +270,6 @@
                         canvas.width = cols * cardW; canvas.height = rows * cardH;
                         const ctx = canvas.getContext('2d');
                         ctx.fillStyle = '#020617'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-
                         const ui = {
                             ssr: await this.downloadImg('./static/assets/ssr_icon.webp'),
                             sr: await this.downloadImg('./static/assets/sr_icon.webp'),
@@ -257,25 +278,29 @@
                             vi: await this.downloadImg('./static/assets/icon_vi.webp'),
                             as: await this.downloadImg('./static/assets/icon_as.webp')
                         };
-
                         for (let i = 0; i < list.length; i++) {
                             const c = list[i]; const x = (i % cols) * cardW; const y = Math.floor(i / cols) * cardH;
                             const img = await this.downloadImg(`./static/cards/s_card-${c.rarity}-${c.id}.webp`);
                             ctx.drawImage(img, x, y, cardW, cardH);
-                            ctx.drawImage(c.rarity==='3'?ui.ssr:ui.sr, x + 20, y + 20, 80, 40);
-                            if (c.attribute) ctx.drawImage(ui[c.attribute], x + cardW - 110, y + 10, 100, 100);
+                            ctx.drawImage(c.rarity==='3'?ui.ssr:ui.sr, x + 25, y + 25, 80, 40);
+                            if (c.attribute) ctx.drawImage(ui[c.attribute], x + cardW - 110, y + 15, 95, 95);
                             ctx.save(); 
-                            ctx.shadowColor = 'rgba(0, 0, 0, 1)'; ctx.shadowBlur = 8; ctx.shadowOffsetX = 4; ctx.shadowOffsetY = 4;
+                            ctx.shadowColor = 'black'; ctx.shadowBlur = 12;
                             ctx.fillStyle = 'white'; ctx.font = 'italic 900 70px Arial Black'; 
-                            ctx.fillText(this.getLevelDisplay(c), x + 25, y + cardH - 25);
+                            ctx.fillText(this.getLevelDisplay(c), x + 30, y + cardH - 30);
                             ctx.restore();
                         }
-                        this.generatedImageSrc = canvas.toDataURL('image/jpeg', 0.9);
+                        this.generatedImageSrc = canvas.toDataURL('image/jpeg', 0.88);
                         this.showModal = true;
-                    } catch (e) { 
-                        console.error(e); 
-                        alert("绘图失败，请检查 static/assets 资源是否完整"); 
-                    } finally { this.isGenerating = false; }
+                    } catch (e) { alert("绘图失败"); }
+                    finally { this.isGenerating = false; }
+                },
+                copyResult() { 
+                    if (!this.exportString) return;
+                    const el = document.createElement('textarea');
+                    el.value = this.exportString; document.body.appendChild(el);
+                    el.select(); document.execCommand('copy');
+                    document.body.removeChild(el); alert("已成功复制导出代码");
                 }
             },
             mounted() { this.init() }
