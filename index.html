@@ -9,41 +9,20 @@
     <script src="config.js"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-        
-        /* 状态样式 */
         .is-unowned { filter: brightness(0.4); }
         .unowned-mask { background-color: rgba(0, 0, 0, 0.6); }
         .icon-dimmed { filter: brightness(0.6) saturate(0.8); opacity: 0.7; }
-        
         .rarity-icon { height: 18px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); }
         .attr-icon { height: 24px; width: auto; z-index: 40; }
         @media (min-width: 640px) { .rarity-icon { height: 26px; } .attr-icon { height: 36px; } }
-
-        /* 筛选按钮 */
-        .filter-btn {
-            height: 38px; min-width: 80px; flex: 1;
-            display: flex; align-items: center; justify-content: center;
-            border-radius: 8px; font-weight: 800; font-size: 11px;
-            transition: all 0.2s ease; border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .btn-ssr-active {
-            background: linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7, #facc15);
-            color: white; border: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-        }
-        .btn-sr-active {
-            background: linear-gradient(180deg, #fef08a 0%, #eab308 50%, #a16207 100%);
-            color: #422006; border: none; box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
-        }
-
-        /* 属性 */
+        .filter-btn { height: 38px; min-width: 80px; flex: 1; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: 800; font-size: 11px; transition: all 0.2s ease; border: 1px solid rgba(255,255,255,0.05); }
+        .btn-ssr-active { background: linear-gradient(135deg, #22d3ee, #3b82f6, #a855f7, #facc15); color: white; border: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); }
+        .btn-sr-active { background: linear-gradient(180deg, #fef08a 0%, #eab308 50%, #a16207 100%); color: #422006; border: none; box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3); }
         .btn-vo-active { background-color: #ef4444; color: white; border: none; }
         .btn-da-active { background-color: #3b82f6; color: white; border: none; }
         .btn-vi-active { background-color: #eab308; color: #422006; border: none; }
         .btn-as-active { background-color: #22c55e; color: white; border: none; }
-
         .btn-inactive { background-color: #1e293b; color: #64748b; }
-
         .card-img { opacity: 0; transition: opacity 0.4s ease-out; }
         .card-img-loaded { opacity: 1 !important; }
         .lvl-text { text-shadow: 0 0 10px rgba(0,0,0,0.9); font-family: 'Arial Black', sans-serif; }
@@ -69,7 +48,7 @@
                     <span>{{ isGenerating ? '正在绘图...' : '生成汇总长图' }}</span>
                 </button>
                 <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer w-full lg:max-w-md group relative text-right">
-                    <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">BOX代码 (点击复制)</div>
+                    <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">压缩分享代码 (点击复制)</div>
                     <div class="font-mono text-[10px] text-indigo-400 truncate">{{ exportString || 'Waiting...' }}</div>
                 </div>
             </div>
@@ -97,13 +76,10 @@
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-6">
             <div v-for="card in filteredCards" :key="card.rarity + '-' + card.id" 
                  class="relative aspect-video rounded-xl sm:rounded-[2rem] overflow-hidden bg-slate-950 border border-slate-800 transition-transform active:scale-[0.98]">
-                
                 <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
                      loading="lazy" @load="card.loaded = true"
                      :class="['w-full h-full object-cover card-img', card.loaded ? 'card-img-loaded' : '', card.breakLevel === -1 ? 'is-unowned' : '']">
-                
                 <div v-if="card.breakLevel === -1 && card.loaded" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
-
                 <div class="absolute inset-0 flex z-30" v-if="card.loaded">
                     <div @click.stop="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                     <div @click.stop="changeLevel(card, 1)" 
@@ -111,7 +87,6 @@
                          @mouseup="endLongPress" @touchend="endLongPress" @mouseleave="endLongPress"
                          class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                 </div>
-
                 <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20" v-if="card.loaded">
                     <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
                          :class="['rarity-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
@@ -120,7 +95,6 @@
                     <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
                          :class="['attr-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
                 </div>
-
                 <div class="absolute bottom-3 left-4 sm:bottom-5 sm:left-6 z-20" v-if="card.loaded">
                     <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-600' : 'text-white'">
                         {{ getLevelDisplay(card) }}
@@ -144,7 +118,7 @@
 
     <script>
         const { createApp } = Vue;
-        const STORAGE_KEY = 'gakuen_box_data_v5';
+        const STORAGE_KEY = 'gakuen_box_data_v6'; // 更新版本号
 
         createApp({
             data() { 
@@ -156,14 +130,18 @@
             },
             computed: {
                 ownedCount() { return this.cards.filter(c => c.breakLevel >= 0).length; },
-                // Base64 编码
+                
+                // 【核心修改1】导出：全量等级序列化 + Base36
                 exportString() { 
-                    const rawString = [...this.cards].filter(c => c.breakLevel >= 0)
-                        .sort((a, b) => (Number(b.rarity) - Number(a.rarity)) || (Number(b.id) - Number(a.id)))
-                        .map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); 
+                    // 1. 获取所有卡片的原始状态（固定顺序：按稀有度及ID排序后的 cards 数组）
+                    // 状态：0(未点亮), 1-5(Lv.0-4)
+                    const statusString = this.cards.map(c => c.breakLevel + 1).join('');
                     
-                    return rawString ? btoa(rawString) : '';
+                    // 2. 将这串数字视为一个大整数，转为 36 进制字符串以极度压缩长度
+                    // 在前面补 1 是为了防止首位为 0 时在大数转换中丢失
+                    return statusString ? BigInt('1' + statusString).toString(36) : '';
                 },
+                
                 filteredCards() {
                     let result = [...this.cards];
                     if (this.selectedRarities.length > 0) result = result.filter(c => this.selectedRarities.includes(c.rarity));
@@ -172,6 +150,11 @@
                 }
             },
             methods: {
+                // Base36 解码大整数助手
+                fromBase36(s) {
+                    return [...s].reduce((acc, curr) => acc * 36n + BigInt(parseInt(curr, 36)), 0n);
+                },
+
                 getLevelDisplay(card) {
                     const lv = card.breakLevel;
                     if (lv === -1) return 'OFF';
@@ -194,76 +177,63 @@
                     if (next > 4) next = 4; if (next < -1) next = -1;
                     if (card.breakLevel !== next) { card.breakLevel = next; this.saveToLocal(); }
                 },
+
                 init() {
                     const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
                     const allCards = [];
+                    // 这里确立了固定的序列顺序：CARD_CONFIG 的属性遍历顺序
                     for (const [attr, rarities] of Object.entries(CARD_CONFIG)) {
                         for (const [rarity, ids] of Object.entries(rarities)) {
                             ids.forEach(id => {
+                                const paddedId = String(id).padStart(4, '0');
                                 allCards.push({ 
-                                    id: String(id).padStart(4, '0'), 
+                                    id: paddedId, 
                                     rarity: String(rarity), 
-                                    breakLevel: localData[String(id).padStart(4, '0')] !== undefined ? localData[String(id).padStart(4, '0')] : -1, 
+                                    breakLevel: localData[paddedId] !== undefined ? localData[paddedId] : -1, 
                                     attribute: attr.toLowerCase(), 
                                     loaded: false 
                                 });
                             });
                         }
                     }
-                    this.cards = allCards;
+                    // 统一排序：这是序列化的基准，不可随意更改
+                    this.cards = allCards.sort((a, b) => (Number(b.rarity) - Number(a.rarity)) || (Number(b.id) - Number(a.id)));
                 },
-                toggleFilter(attr) {
-                    const idx = this.selectedAttrs.indexOf(attr);
-                    if (idx > -1) this.selectedAttrs.splice(idx, 1); else this.selectedAttrs.push(attr);
-                },
-                toggleRarityFilter(r) {
-                    const idx = this.selectedRarities.indexOf(r);
-                    if (idx > -1) this.selectedRarities.splice(idx, 1); else this.selectedRarities.push(r);
-                },
-                clearAllFilters() { this.selectedAttrs = []; this.selectedRarities = []; },
-                
-                // Base64 解码
+
+                // 【核心修改2】导入：Base36 解码并按位置还原状态
                 importCode() {
-                    const input = prompt("请粘贴导出的代码字符串：");
+                    const input = prompt("请粘贴导出的压缩代码：");
                     if (!input || input.trim() === "") return;
                     
-                    let code = "";
                     try {
-                        // 尝试 Base64 解码
-                        code = atob(input.trim());
+                        // 1. 从 36 进制还原为数字字符串
+                        let decoded = this.fromBase36(input.trim().toLowerCase()).toString();
+                        
+                        // 2. 去掉开头补位的 '1'
+                        const statusArray = decoded.substring(1).split('');
+                        
+                        // 3. 校验长度（必须与当前牌库总数一致）
+                        if (statusArray.length !== this.cards.length) {
+                            alert("请检查代码：由于牌库版本变动，该代码已失效。");
+                            return;
+                        }
+
+                        // 4. 按顺序还原
+                        statusArray.forEach((val, index) => {
+                            const lv = parseInt(val) - 1;
+                            if (lv >= -1 && lv <= 4) {
+                                this.cards[index].breakLevel = lv;
+                            }
+                        });
+
+                        this.saveToLocal();
+                        alert("BOX 成功继承！");
                     } catch (e) {
-                        alert("请检查代码：无效的格式");
-                        return;
+                        alert("无效的代码格式");
                     }
-                    
-                    const items = code.split(',');
-                    const updates = [];
-
-                    for (const item of items) {
-                        const parts = item.split('-');
-                        if (parts.length !== 3) { alert("请检查代码：格式不正确"); return; }
-
-                        const [rarity, id, lv] = parts;
-                        const paddedId = id.padStart(4, '0');
-                        const rInt = parseInt(rarity);
-                        const lvInt = parseInt(lv);
-
-                        if (rInt < 2 || rInt > 3) { alert("请检查代码：稀有度数值无效"); return; }
-                        if (lvInt < 0 || lvInt > 4) { alert("请检查代码：等级数值无效"); return; }
-
-                        const target = this.cards.find(c => c.id === paddedId && c.rarity === String(rarity));
-                        if (!target) { alert(`请检查代码：卡片编号 ${paddedId} 在该稀有度下不存在`); return; }
-
-                        updates.push({ card: target, level: lvInt });
-                    }
-
-                    this.cards.forEach(c => c.breakLevel = -1);
-                    updates.forEach(u => u.card.breakLevel = u.level);
-                    
-                    this.saveToLocal();
-                    alert("数据继承成功！");
                 },
 
+                // ... 其他方法保持不变 ...
                 saveToLocal() {
                     const storage = {};
                     this.cards.forEach(c => { if (c.breakLevel !== -1) storage[c.id] = c.breakLevel; });
@@ -310,7 +280,7 @@
                     const el = document.createElement('textarea');
                     el.value = this.exportString; document.body.appendChild(el);
                     el.select(); document.execCommand('copy');
-                    document.body.removeChild(el); alert("已复制代码");
+                    document.body.removeChild(el); alert("已复制极简分享代码");
                 }
             },
             mounted() { this.init() }
