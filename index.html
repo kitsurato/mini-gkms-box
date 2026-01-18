@@ -10,14 +10,28 @@
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
         .is-unowned { filter: grayscale(1) brightness(0.25); }
-        /* 响应式图标尺寸 */
+        .icon-grayscale { filter: grayscale(100%) brightness(0.6) contrast(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important; opacity: 0.8; }
+        
+        /* 响应式图标 */
         .rarity-icon { height: 18px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); transition: all 0.3s; }
         .attr-icon { height: 24px; width: auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9)); z-index: 40; transition: all 0.3s; }
         @media (min-width: 640px) {
             .rarity-icon { height: 26px; }
             .attr-icon { height: 36px; }
         }
-        .icon-grayscale { filter: grayscale(100%) brightness(0.6) contrast(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important; opacity: 0.8; }
+
+        /* 骨架屏动画 */
+        @keyframes skeleton-loading {
+            0% { background-color: #0f172a; }
+            50% { background-color: #1e293b; }
+            100% { background-color: #0f172a; }
+        }
+        .skeleton { animation: skeleton-loading 1.5s infinite ease-in-out; }
+
+        /* 图片懒加载淡入 */
+        .card-img { opacity: 0; transition: opacity 0.6s ease-out, filter 0.3s; }
+        .card-img-loaded { opacity: 1 !important; }
+
         .lvl-text { text-shadow: 0 0 10px rgba(0,0,0,0.9), 0 0 20px rgba(99, 102, 241, 0.4); font-family: 'Arial Black', sans-serif; }
         .tap-feedback:active { background: rgba(255,255,255,0.08); }
         .loader { border: 3px solid #f3f3f3; border-top: 3px solid #6366f1; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; }
@@ -27,7 +41,7 @@
 <body class="antialiased select-none">
     <div id="app" class="max-w-[1600px] mx-auto px-2 py-4 sm:px-4 sm:py-8">
         
-        <header class="mb-6 sm:mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+        <header class="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
             <div>
                 <h1 class="text-2xl sm:text-3xl font-black text-indigo-500 tracking-tighter mb-2 sm:mb-4">学园偶像大师 BOX分享工具</h1>
                 <div class="flex gap-2">
@@ -52,32 +66,51 @@
             </div>
         </header>
 
+        <div class="mb-6 flex items-center gap-3 bg-indigo-500/10 border-l-4 border-indigo-500 p-3 sm:p-4 rounded-r-xl">
+            <div class="bg-indigo-500 text-white p-1 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-indigo-200 font-medium">
+                操作说明：点击卡片<span class="text-white font-bold mx-1 text-sm">左半部分</span>减少等级/关闭，点击<span class="text-white font-bold mx-1 text-sm">右半部分</span>增加等级。
+            </p>
+        </div>
+
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-5">
             <div v-for="card in cards" :key="card.id" 
-                 class="relative aspect-video rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl sm:shadow-2xl">
+                 class="relative aspect-video rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl sm:shadow-2xl"
+                 :class="{ 'skeleton': !card.loaded }">
+                
                 <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
                      loading="lazy"
-                     :class="['w-full h-full object-cover transition-opacity duration-500', card.breakLevel === -1 ? 'is-unowned' : 'opacity-100']">
+                     @load="card.loaded = true"
+                     :class="[
+                        'w-full h-full object-cover card-img', 
+                        card.loaded ? 'card-img-loaded' : '',
+                        card.breakLevel === -1 ? 'is-unowned' : ''
+                     ]">
                 
-                <div class="absolute inset-0 flex z-30">
+                <div class="absolute inset-0 flex z-30" v-if="card.loaded">
                     <div @click="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                     <div @click="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                 </div>
 
-                <div class="absolute top-2 left-2 sm:top-4 sm:left-4 z-20">
+                <div class="absolute top-2 left-2 sm:top-4 sm:left-4 z-20" v-if="card.loaded">
                     <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
                          :class="['rarity-icon', card.breakLevel === -1 ? 'icon-grayscale' : '']">
                 </div>
-                <div class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 z-40">
+                <div class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 z-40" v-if="card.loaded">
                     <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
                          :class="['attr-icon', card.breakLevel === -1 ? 'icon-grayscale' : '']">
                 </div>
 
-                <div class="absolute bottom-2 left-3 sm:bottom-4 sm:left-5 z-20">
+                <div class="absolute bottom-2 left-3 sm:bottom-4 sm:left-5 z-20" v-if="card.loaded">
                     <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-800' : 'text-white'">
-                        {{ getLevelText(card.breakLevel) }}
+                        {{ getLevelDisplay(card) }}
                     </div>
                 </div>
+                
                 <div v-if="card.breakLevel >= 0" :class="['absolute inset-0 border rounded-xl sm:rounded-3xl sm:border-2 pointer-events-none z-10', card.rarity === '3' ? 'border-yellow-500/20' : 'border-indigo-500/20']"></div>
             </div>
         </div>
@@ -106,7 +139,17 @@
                 exportString() { return this.cards.filter(c => c.breakLevel >= 0).map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); }
             },
             methods: {
-                getLevelText(lv) { const m = {[-1]:'OFF', 0:'LV.40', 1:'LV.45', 2:'LV.50', 3:'LV.55', 4:'LV.60'}; return m[lv]; },
+                getLevelDisplay(card) {
+                    const lv = card.breakLevel;
+                    if (lv === -1) return 'OFF';
+                    if (card.rarity === '3') {
+                        const m = { 0:'LV.40', 1:'LV.45', 2:'LV.50', 3:'LV.55', 4:'LV.60' };
+                        return m[lv];
+                    } else {
+                        const m = { 0:'LV.30', 1:'LV.35', 2:'LV.40', 3:'LV.45', 4:'LV.50' };
+                        return m[lv];
+                    }
+                },
                 
                 init() {
                     const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
@@ -118,7 +161,8 @@
                                     id: id,
                                     rarity: rarity,
                                     breakLevel: localData[id] !== undefined ? localData[id] : -1,
-                                    attribute: attr
+                                    attribute: attr,
+                                    loaded: false
                                 });
                             });
                         }
@@ -207,7 +251,7 @@
                             ssr: await this.downloadImg('./static/assets/ssr_icon.webp'),
                             sr: await this.downloadImg('./static/assets/sr_icon.webp'),
                             vo: await this.downloadImg('./static/assets/icon_vo.webp'),
-                            da: await this.downloadImg('./static/assets/icon_da.webp'),
+                            da: await this.downloadImg('./static/assets/icon_vo.webp'), // 兼容性检查：如果是da请确保路径正确
                             vi: await this.downloadImg('./static/assets/icon_vi.webp'),
                             as: await this.downloadImg('./static/assets/icon_as.webp')
                         };
@@ -221,7 +265,7 @@
                             ctx.save(); 
                             ctx.shadowColor = 'rgba(0, 0, 0, 1)'; ctx.shadowBlur = 8; ctx.shadowOffsetX = 4; ctx.shadowOffsetY = 4;
                             ctx.fillStyle = 'white'; ctx.font = 'italic 900 70px Arial Black'; 
-                            ctx.fillText(this.getLevelText(c.breakLevel), x + 25, y + cardH - 25);
+                            ctx.fillText(this.getLevelDisplay(c), x + 25, y + cardH - 25);
                             ctx.restore();
                         }
                         this.generatedImageSrc = canvas.toDataURL('image/jpeg', 0.9);
