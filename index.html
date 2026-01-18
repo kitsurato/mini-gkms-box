@@ -9,9 +9,12 @@
     <script src="config.js"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-        .is-unowned { filter: grayscale(1) brightness(0.25); }
+        .is-unowned { filter: brightness(0.5); }
         .icon-grayscale { filter: grayscale(100%) brightness(0.6) contrast(0.8) drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important; opacity: 0.8; }
-        
+        .unowned-mask {background-color: rgba(0, 0, 0, 0.3); /* 50% 黑色遮罩 */
+                       transition: all 0.3s ease;}
+        .icon-dimmed {filter: brightness(0.6) saturate(0.8);
+                      opacity: 0.7;}
         /* 响应式图标 */
         .rarity-icon { height: 18px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8)); transition: all 0.3s; }
         .attr-icon { height: 24px; width: auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.9)); z-index: 40; transition: all 0.3s; }
@@ -19,7 +22,6 @@
             .rarity-icon { height: 26px; }
             .attr-icon { height: 36px; }
         }
-
         /* 骨架屏动画 */
         @keyframes skeleton-loading {
             0% { background-color: #0f172a; }
@@ -78,42 +80,42 @@
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 sm:gap-5">
-            <div v-for="card in cards" :key="card.id" 
+            <div v-for="card in cards" :key="card.id"
                  class="relative aspect-video rounded-xl sm:rounded-3xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl sm:shadow-2xl"
                  :class="{ 'skeleton': !card.loaded }">
-                
-                <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
+                <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'"
                      loading="lazy"
                      @load="card.loaded = true"
                      :class="[
-                        'w-full h-full object-cover card-img', 
-                        card.loaded ? 'card-img-loaded' : '',
-                        card.breakLevel === -1 ? 'is-unowned' : ''
+                         'w-full h-full object-cover card-img',
+                         card.loaded ? 'card-img-loaded' : '',
+                         card.breakLevel === -1 ? 'is-unowned' : ''
                      ]">
-                
+
+                <div v-if="card.breakLevel === -1" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
+
                 <div class="absolute inset-0 flex z-30" v-if="card.loaded">
                     <div @click="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                     <div @click="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                 </div>
 
                 <div class="absolute top-2 left-2 sm:top-4 sm:left-4 z-20" v-if="card.loaded">
-                    <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
-                         :class="['rarity-icon', card.breakLevel === -1 ? 'icon-grayscale' : '']">
+                    <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'"
+                         :class="['rarity-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
                 </div>
+
                 <div class="absolute top-1.5 right-1.5 sm:top-3 sm:right-3 z-40" v-if="card.loaded">
-                    <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
-                         :class="['attr-icon', card.breakLevel === -1 ? 'icon-grayscale' : '']">
+                    <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'"
+                         :class="['attr-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
                 </div>
 
                 <div class="absolute bottom-2 left-3 sm:bottom-4 sm:left-5 z-20" v-if="card.loaded">
-                    <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-800' : 'text-white'">
+                    <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter"
+                         :class="card.breakLevel === -1 ? 'text-slate-500' : 'text-white'">
                         {{ getLevelDisplay(card) }}
                     </div>
                 </div>
-                
-                <div v-if="card.breakLevel >= 0" :class="['absolute inset-0 border rounded-xl sm:rounded-3xl sm:border-2 pointer-events-none z-10', card.rarity === '3' ? 'border-yellow-500/20' : 'border-indigo-500/20']"></div>
             </div>
-        </div>
 
         <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90" @click.self="showModal = false">
             <div class="bg-slate-900 p-4 rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-800">
@@ -251,7 +253,7 @@
                             ssr: await this.downloadImg('./static/assets/ssr_icon.webp'),
                             sr: await this.downloadImg('./static/assets/sr_icon.webp'),
                             vo: await this.downloadImg('./static/assets/icon_vo.webp'),
-                            da: await this.downloadImg('./static/assets/icon_vo.webp'), // 兼容性检查：如果是da请确保路径正确
+                            da: await this.downloadImg('./static/assets/icon_da.webp'),
                             vi: await this.downloadImg('./static/assets/icon_vi.webp'),
                             as: await this.downloadImg('./static/assets/icon_as.webp')
                         };
