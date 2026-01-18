@@ -19,7 +19,7 @@
         .attr-icon { height: 24px; width: auto; z-index: 40; }
         @media (min-width: 640px) { .rarity-icon { height: 26px; } .attr-icon { height: 36px; } }
 
-        /* 扁平风格筛选按钮 */
+        /* 筛选按钮 */
         .filter-btn {
             height: 38px; min-width: 80px; flex: 1;
             display: flex; align-items: center; justify-content: center;
@@ -36,7 +36,7 @@
             color: #422006; border: none; box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3);
         }
 
-        /* 属性：Vo红, Da蓝, Vi黄, As绿 */
+        /* 属性 */
         .btn-vo-active { background-color: #ef4444; color: white; border: none; }
         .btn-da-active { background-color: #3b82f6; color: white; border: none; }
         .btn-vi-active { background-color: #eab308; color: #422006; border: none; }
@@ -156,10 +156,13 @@
             },
             computed: {
                 ownedCount() { return this.cards.filter(c => c.breakLevel >= 0).length; },
+                // Base64 编码
                 exportString() { 
-                    return [...this.cards].filter(c => c.breakLevel >= 0)
+                    const rawString = [...this.cards].filter(c => c.breakLevel >= 0)
                         .sort((a, b) => (Number(b.rarity) - Number(a.rarity)) || (Number(b.id) - Number(a.id)))
                         .map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); 
+                    
+                    return rawString ? btoa(rawString) : '';
                 },
                 filteredCards() {
                     let result = [...this.cards];
@@ -219,16 +222,25 @@
                 },
                 clearAllFilters() { this.selectedAttrs = []; this.selectedRarities = []; },
                 
+                // Base64 解码
                 importCode() {
-                    const code = prompt("请粘贴导出的代码字符串：");
-                    if (!code || code.trim() === "") return;
+                    const input = prompt("请粘贴导出的代码字符串：");
+                    if (!input || input.trim() === "") return;
+                    
+                    let code = "";
+                    try {
+                        // 尝试 Base64 解码
+                        code = atob(input.trim());
+                    } catch (e) {
+                        alert("请检查代码：无效的格式");
+                        return;
+                    }
                     
                     const items = code.split(',');
                     const updates = [];
 
                     for (const item of items) {
                         const parts = item.split('-');
-                        // 校验1：格式必须是 三部分 (稀有度-ID-等级)
                         if (parts.length !== 3) { alert("请检查代码：格式不正确"); return; }
 
                         const [rarity, id, lv] = parts;
@@ -236,19 +248,15 @@
                         const rInt = parseInt(rarity);
                         const lvInt = parseInt(lv);
 
-                        // 校验2：第一位稀有度限制 (2-3)
                         if (rInt < 2 || rInt > 3) { alert("请检查代码：稀有度数值无效"); return; }
-                        // 校验3：第三位等级限制 (0-4)
                         if (lvInt < 0 || lvInt > 4) { alert("请检查代码：等级数值无效"); return; }
 
-                        // 校验4：牌库存在性检查 (必须匹配稀有度和ID)
                         const target = this.cards.find(c => c.id === paddedId && c.rarity === String(rarity));
                         if (!target) { alert(`请检查代码：卡片编号 ${paddedId} 在该稀有度下不存在`); return; }
 
                         updates.push({ card: target, level: lvInt });
                     }
 
-                    // 只有全部校验通过，才开始重置并应用
                     this.cards.forEach(c => c.breakLevel = -1);
                     updates.forEach(u => u.card.breakLevel = u.level);
                     
@@ -302,7 +310,7 @@
                     const el = document.createElement('textarea');
                     el.value = this.exportString; document.body.appendChild(el);
                     el.select(); document.execCommand('copy');
-                    document.body.removeChild(el); alert("已复制");
+                    document.body.removeChild(el); alert("已复制代码");
                 }
             },
             mounted() { this.init() }
