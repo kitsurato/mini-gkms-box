@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>学园偶像大师BOX工具</title>
+    <title>学园偶像大师 BOX 分享工具</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="config.js"></script>
@@ -24,21 +24,25 @@
         
         <header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-                <div class="flex items-center gap-3">
-                    <h1 class="text-3xl font-black text-indigo-500 tracking-tighter">UID: {{ currentUid }}</h1>
-                    <button @click="switchUid" class="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-400">切换编号</button>
+                <h1 class="text-3xl font-black text-indigo-500 tracking-tighter mb-4">学园偶像大师 BOX 分享工具</h1>
+                <div class="flex gap-2">
+                    <button @click="importCode" class="text-[11px] bg-indigo-900/50 px-3 py-1.5 rounded-lg text-indigo-300 hover:bg-indigo-800 hover:text-white transition">导入数据</button>
+                    <button @click="resetData" class="text-[11px] bg-red-900/50 px-3 py-1.5 rounded-lg text-red-300 hover:bg-red-800 hover:text-white transition">清空选择</button>
                 </div>
-                <div class="mt-2 text-[10px] text-slate-500 font-bold uppercase tracking-widest">已点亮 {{ ownedCount }} 张卡片</div>
+                <div class="mt-4 text-[10px] text-slate-500 font-bold uppercase tracking-widest">当前已点亮 {{ ownedCount }} 张卡片</div>
             </div>
             
             <div class="flex flex-col items-end gap-3 w-full md:w-auto">
                 <button @click="generateSummaryImage" :disabled="isGenerating || ownedCount === 0"
                         class="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-700 text-white px-6 py-3 rounded-xl font-bold transition w-full md:w-auto">
                     <div v-if="isGenerating" class="loader"></div>
-                    <span>{{ isGenerating ? '正在绘图...' : '生成极简汇总长图' }}</span>
+                    <span>{{ isGenerating ? '正在绘图...' : '生成汇总长图' }}</span>
                 </button>
-                <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-4 cursor-pointer w-full md:max-w-md">
-                    <div class="font-mono text-[10px] text-indigo-400 break-all truncate">{{ exportString || '尚未点亮...' }}</div>
+                <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-4 cursor-pointer w-full md:max-w-md group relative">
+                    <div class="text-[9px] text-slate-500 mb-1 uppercase tracking-tighter">点击区域复制导出代码</div>
+                    <div class="font-mono text-[10px] text-indigo-400 break-all truncate group-hover:text-indigo-300">
+                        {{ exportString || '尚未点亮任何卡片...' }}
+                    </div>
                 </div>
             </div>
         </header>
@@ -64,23 +68,34 @@
                          :class="['attr-icon', card.breakLevel === -1 ? 'icon-grayscale' : '']">
                 </div>
 
-                <div class="absolute bottom-4 left-5 z-20"><div class="lvl-text text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-800' : 'text-white'">{{ getLevelText(card.breakLevel) }}</div></div>
+                <div class="absolute bottom-4 left-5 z-20">
+                    <div class="lvl-text text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-800' : 'text-white'">
+                        {{ getLevelText(card.breakLevel) }}
+                    </div>
+                </div>
                 <div v-if="card.breakLevel >= 0" :class="['absolute inset-0 border-2 rounded-3xl pointer-events-none z-10', card.rarity === '3' ? 'border-yellow-500/20' : 'border-indigo-500/20']"></div>
             </div>
         </div>
 
         <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90" @click.self="showModal = false">
-            <div class="bg-slate-900 p-4 rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
-                <div class="flex justify-between items-center mb-4 text-white font-bold"><h3>汇总长图已生成 (长按保存)</h3><button @click="showModal = false">✕</button></div>
-                <div class="flex-1 overflow-y-auto bg-black rounded-xl p-2"><img :src="generatedImageSrc" class="max-w-full mx-auto"></div>
+            <div class="bg-slate-900 p-4 rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-800">
+                <div class="flex justify-between items-center mb-4 text-white font-bold px-2">
+                    <h3>汇总长图已生成 (长按保存)</h3>
+                    <button @click="showModal = false" class="text-slate-400 hover:text-white text-2xl">✕</button>
+                </div>
+                <div class="flex-1 overflow-y-auto bg-black rounded-xl p-2">
+                    <img :src="generatedImageSrc" class="max-w-full mx-auto">
+                </div>
             </div>
         </div>
     </div>
 
     <script>
         const { createApp } = Vue;
+        const STORAGE_KEY = 'gakuen_box_global_data';
+
         createApp({
-            data() { return { cards: [], currentUid: '1001', showModal: false, generatedImageSrc: null, isGenerating: false } },
+            data() { return { cards: [], showModal: false, generatedImageSrc: null, isGenerating: false } },
             computed: {
                 ownedCount() { return this.cards.filter(c => c.breakLevel >= 0).length; },
                 exportString() { return this.cards.filter(c => c.breakLevel >= 0).map(c => `${c.rarity}-${parseInt(c.id)}-${c.breakLevel}`).join(','); }
@@ -88,18 +103,8 @@
             methods: {
                 getLevelText(lv) { const m = {[-1]:'OFF', 0:'LV.40', 1:'LV.45', 2:'LV.50', 3:'LV.55', 4:'LV.60'}; return m[lv]; },
                 
-                // 【修改点】初始化逻辑：从 LocalStorage 读取
-                init(targetUid = null) {
-                    const p = new URLSearchParams(window.location.search);
-                    let uid = targetUid || p.get('uid');
-                    if (!uid) { uid = prompt("请输入UID:", "1001"); if (!uid || isNaN(uid)) uid = "1001"; }
-                    this.currentUid = uid;
-                    window.history.replaceState({}, '', `?uid=${uid}`);
-
-                    // 读取本地存储数据
-                    const localData = JSON.parse(localStorage.getItem(`box_data_${uid}`) || '{}');
-                    
-                    // 基于 config.js 构建卡片数据列表
+                init() {
+                    const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
                     const allCards = [];
                     for (const [attr, rarities] of Object.entries(CARD_CONFIG)) {
                         for (const [rarity, ids] of Object.entries(rarities)) {
@@ -113,17 +118,45 @@
                             });
                         }
                     }
-                    // 排序：高稀有度在前
                     this.cards = allCards.sort((a, b) => (parseInt(b.rarity) - parseInt(a.rarity)) || (parseInt(b.id) - parseInt(a.id)));
                 },
 
-                switchUid() { const n = prompt("切换UID:", this.currentUid); if (n && !isNaN(n)) this.init(n); },
+                importCode() {
+                    const code = prompt("请粘贴导出的代码字符串：");
+                    if (!code || code.trim() === "") return;
+                    try {
+                        const itemArray = code.split(',');
+                        const importMap = {};
+                        itemArray.forEach(item => {
+                            const parts = item.split('-');
+                            if (parts.length === 3) {
+                                const [rarity, id, lv] = parts;
+                                importMap[id.padStart(4, '0')] = parseInt(lv);
+                            }
+                        });
+                        this.cards.forEach(card => {
+                            card.breakLevel = importMap[card.id] !== undefined ? importMap[card.id] : -1;
+                        });
+                        this.saveToLocal();
+                        alert("数据继承成功！");
+                    } catch (e) {
+                        alert("导入失败：请确保代码格式正确");
+                    }
+                },
 
-                // 【修改点】保存逻辑：写入 LocalStorage
-                async changeLevel(c, s) {
-                    let v = c.breakLevel + s; if (v > 4) v = 4; if (v < -1) v = -1;
-                    if (c.breakLevel !== v) { 
-                        c.breakLevel = v; 
+                resetData() {
+                    if (confirm("确定要清空所有已选择的卡片吗？此操作无法恢复。")) {
+                        this.cards.forEach(card => card.breakLevel = -1);
+                        this.saveToLocal();
+                    }
+                },
+
+                async changeLevel(card, step) {
+                    let next = card.breakLevel + step;
+                    if (next > 4) next = 4;
+                    if (next < -1) next = -1;
+                    if (card.breakLevel !== next) { 
+                        card.breakLevel = next; 
                         this.saveToLocal();
                     }
                 },
@@ -133,12 +166,25 @@
                     this.cards.forEach(c => {
                         if (c.breakLevel !== -1) storage[c.id] = c.breakLevel;
                     });
-                    localStorage.setItem(`box_data_${this.currentUid}`, JSON.stringify(storage));
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
                 },
 
-                async copyResult() { const t = this.exportString; if (!t) return alert("没有可复制的内容"); if (navigator.clipboard && window.isSecureContext) { try { await navigator.clipboard.writeText(t); alert("代码已复制"); return; } catch (e) {} } const a = document.createElement("textarea"); a.value = t; a.style.position = "fixed"; a.style.left = "-9999px"; document.body.appendChild(a); a.focus(); a.select(); try { document.execCommand("copy") ? alert("代码已复制(兼容模式)") : alert("复制失败"); } catch (e) { alert("浏览器不支持自动复制"); } document.body.removeChild(a); },
+                async copyResult() {
+                    const text = this.exportString;
+                    if (!text) return alert("没有可导出的数据");
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        alert("代码已成功复制到剪贴板");
+                    } catch (e) {
+                        const input = document.createElement('textarea');
+                        input.value = text; document.body.appendChild(input);
+                        input.select(); document.execCommand('copy');
+                        document.body.removeChild(input);
+                        alert("代码已复制");
+                    }
+                },
                 
-                downloadImg(s) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = s; }); },
+                downloadImg(src) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); },
                 
                 async generateSummaryImage() {
                     const list = this.cards.filter(c => c.breakLevel >= 0); 
@@ -163,24 +209,22 @@
 
                         for (let i = 0; i < list.length; i++) {
                             const c = list[i]; const x = (i % cols) * cardW; const y = Math.floor(i / cols) * cardH;
-                            // 绘图也使用 webp
                             const img = await this.downloadImg(`./static/cards/s_card-${c.rarity}-${c.id}.webp`);
                             ctx.drawImage(img, x, y, cardW, cardH);
-                            
                             ctx.drawImage(c.rarity==='3'?ui.ssr:ui.sr, x + 20, y + 20, 80, 40);
                             if (c.attribute) ctx.drawImage(ui[c.attribute], x + cardW - 110, y + 10, 100, 100);
-                            
                             ctx.save(); 
-                            ctx.shadowColor = 'rgba(0, 0, 0, 1)';
-                            ctx.shadowBlur = 8; ctx.shadowOffsetX = 4; ctx.shadowOffsetY = 4;
-                            ctx.fillStyle = 'white';
-                            ctx.font = 'italic 900 70px Arial Black'; 
+                            ctx.shadowColor = 'rgba(0, 0, 0, 1)'; ctx.shadowBlur = 8; ctx.shadowOffsetX = 4; ctx.shadowOffsetY = 4;
+                            ctx.fillStyle = 'white'; ctx.font = 'italic 900 70px Arial Black'; 
                             ctx.fillText(this.getLevelText(c.breakLevel), x + 25, y + cardH - 25);
                             ctx.restore();
                         }
                         this.generatedImageSrc = canvas.toDataURL('image/jpeg', 0.9);
                         this.showModal = true;
-                    } catch (e) { console.error(e); alert("绘图失败，请确保 cards 目录下包含对应的 .webp 文件"); } finally { this.isGenerating = false; }
+                    } catch (e) { 
+                        console.error(e); 
+                        alert("绘图失败，请检查 static/assets 资源是否完整"); 
+                    } finally { this.isGenerating = false; }
                 }
             },
             mounted() { this.init() }
