@@ -203,7 +203,7 @@
                                 allCards.push({ 
                                     id: String(id).padStart(4, '0'), 
                                     rarity: String(rarity), 
-                                    breakLevel: localData[String(id).padStart(4, '0')] !== undefined ? localData[String(id).padStart(4, '0')] : -1, 
+                                    breakLevel: localData[`${rarity}-${String(id).padStart(4, '0')}`] !== undefined ? localData[`${rarity}-${String(id).padStart(4, '0')}`] : -1, 
                                     attribute: attr.toLowerCase(), 
                                     loaded: false 
                                 });
@@ -266,7 +266,7 @@
 
                 saveToLocal() {
                     const storage = {};
-                    this.cards.forEach(c => { if (c.breakLevel !== -1) storage[c.id] = c.breakLevel; });
+                    this.cards.forEach(c => { if (c.breakLevel !== -1) storage[`${c.rarity}-${c.id}`] = c.breakLevel; });
                     localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
                 },
                 resetData() { if (confirm("确定重置？")) { this.cards.forEach(c => c.breakLevel = -1); this.saveToLocal(); } },
