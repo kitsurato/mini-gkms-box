@@ -90,7 +90,7 @@
 
         <div class="flex items-center gap-3 bg-indigo-500/5 border border-indigo-500/20 p-3 rounded-xl mb-6">
             <p class="text-[11px] sm:text-xs text-indigo-200/80 leading-relaxed">
-                点击卡片 <span class="text-white font-bold">左侧</span> 降低等级，点击 <span class="text-white font-bold">右侧</span> 增加等级；<span class="text-indigo-400 font-bold underline">长按右侧</span> 直接设定满级 (LV.4)。
+                点击卡片 <span class="text-white font-bold">左侧</span> 降低等级，点击 <span class="text-white font-bold">右侧</span> 增加等级。
             </p>
         </div>
 
@@ -106,10 +106,7 @@
 
                 <div class="absolute inset-0 flex z-30" v-if="card.loaded">
                     <div @click.stop="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
-                    <div @click.stop="changeLevel(card, 1)" 
-                         @mousedown="startLongPress(card)" @touchstart.passive="startLongPress(card)" 
-                         @mouseup="endLongPress" @touchend="endLongPress" @mouseleave="endLongPress"
-                         class="w-1/2 h-full tap-feedback cursor-pointer"></div>
+                    <div @click.stop="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                 </div>
 
                 <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20" v-if="card.loaded">
@@ -150,8 +147,7 @@
             data() { 
                 return { 
                     cards: [], showModal: false, generatedImageSrc: null, 
-                    isGenerating: false, selectedAttrs: [], selectedRarities: [],
-                    longPressTimer: null, isLongPressActive: false
+                    isGenerating: false, selectedAttrs: [], selectedRarities: []
                 } 
             },
             computed: {
@@ -178,18 +174,7 @@
                     const base = card.rarity === '3' ? 40 : 30;
                     return `LV.${base + (lv * 5)}`;
                 },
-                startLongPress(card) {
-                    this.isLongPressActive = false;
-                    this.longPressTimer = setTimeout(() => {
-                        this.isLongPressActive = true;
-                        card.breakLevel = 4;
-                        this.saveToLocal();
-                        if (window.navigator.vibrate) window.navigator.vibrate(60);
-                    }, 600);
-                },
-                endLongPress() { clearTimeout(this.longPressTimer); setTimeout(() => { this.isLongPressActive = false; }, 100); },
                 changeLevel(card, step) {
-                    if (this.isLongPressActive) return;
                     let next = card.breakLevel + step;
                     if (next > 4) next = 4; if (next < -1) next = -1;
                     if (card.breakLevel !== next) { card.breakLevel = next; this.saveToLocal(); }
@@ -319,3 +304,5 @@
 </body>
 
 </html>
+</html>
+
