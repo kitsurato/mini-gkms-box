@@ -48,6 +48,23 @@
         .card-img-loaded { opacity: 1 !important; }
         .lvl-text { text-shadow: 0 0 10px rgba(0,0,0,0.9); font-family: 'Arial Black', sans-serif; }
         .tap-feedback:active { background: rgba(255,255,255,0.1); }
+        .quick-level-btn {
+            flex: 1;
+            height: 28px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 800;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            background: #0f172a;
+            color: #94a3b8;
+            transition: all 0.2s ease;
+        }
+        .quick-level-btn-active {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: #ffffff;
+            border-color: rgba(129, 140, 248, 0.95);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+        }
     </style>
 </head>
 <body class="antialiased select-none">
@@ -90,38 +107,52 @@
 
         <div class="flex items-center gap-3 bg-indigo-500/5 border border-indigo-500/20 p-3 rounded-xl mb-6">
             <p class="text-[11px] sm:text-xs text-indigo-200/80 leading-relaxed">
-                点击卡片 <span class="text-white font-bold">左侧</span> 降低等级，点击 <span class="text-white font-bold">右侧</span> 增加等级。
+                点击卡片 <span class="text-white font-bold">左侧</span> 降低等级，点击 <span class="text-white font-bold">右侧</span> 增加等级；也可用卡片下方快捷等级按钮快速选择。
             </p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-6">
             <div v-for="card in filteredCards" :key="card.rarity + '-' + card.id" 
-                 class="relative aspect-video rounded-xl sm:rounded-[2rem] overflow-hidden bg-slate-950 border border-slate-800 transition-transform active:scale-[0.98]">
-                
-                <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
-                     loading="lazy" @load="card.loaded = true"
-                     :class="['w-full h-full object-cover card-img', card.loaded ? 'card-img-loaded' : '', card.breakLevel === -1 ? 'is-unowned' : '']">
-                
-                <div v-if="card.breakLevel === -1 && card.loaded" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
+                 class="flex flex-col gap-2">
+                <div class="relative aspect-video rounded-xl sm:rounded-[2rem] overflow-hidden bg-slate-950 border border-slate-800 transition-transform active:scale-[0.98]">
+                    <img :src="'./static/cards/s_card-' + card.rarity + '-' + card.id + '.webp'" 
+                         loading="lazy" @load="card.loaded = true"
+                         :class="['w-full h-full object-cover card-img', card.loaded ? 'card-img-loaded' : '', card.breakLevel === -1 ? 'is-unowned' : '']">
+                    
+                    <div v-if="card.breakLevel === -1 && card.loaded" class="absolute inset-0 unowned-mask z-10 pointer-events-none"></div>
 
-                <div class="absolute inset-0 flex z-30" v-if="card.loaded">
-                    <div @click.stop="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
-                    <div @click.stop="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
-                </div>
-
-                <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20" v-if="card.loaded">
-                    <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
-                         :class="['rarity-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
-                </div>
-                <div class="absolute top-2 right-2 sm:top-4 sm:right-4 z-40" v-if="card.loaded">
-                    <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
-                         :class="['attr-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
-                </div>
-
-                <div class="absolute bottom-3 left-4 sm:bottom-5 sm:left-6 z-20" v-if="card.loaded">
-                    <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-600' : 'text-white'">
-                        {{ getLevelDisplay(card) }}
+                    <div class="absolute inset-0 flex z-30" v-if="card.loaded">
+                        <div @click.stop="changeLevel(card, -1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
+                        <div @click.stop="changeLevel(card, 1)" class="w-1/2 h-full tap-feedback cursor-pointer"></div>
                     </div>
+
+                    <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20" v-if="card.loaded">
+                        <img :src="'./static/assets/' + (card.rarity === '3' ? 'ssr' : 'sr') + '_icon.webp'" 
+                             :class="['rarity-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
+                    </div>
+                    <div class="absolute top-2 right-2 sm:top-4 sm:right-4 z-40" v-if="card.loaded">
+                        <img v-if="card.attribute" :src="'./static/assets/icon_' + card.attribute + '.webp'" 
+                             :class="['attr-icon', card.breakLevel === -1 ? 'icon-dimmed' : '']">
+                    </div>
+
+                    <div class="absolute bottom-3 left-4 sm:bottom-5 sm:left-6 z-20" v-if="card.loaded">
+                        <div class="lvl-text text-xl sm:text-3xl font-black italic tracking-tighter" :class="card.breakLevel === -1 ? 'text-slate-600' : 'text-white'">
+                            {{ getLevelDisplay(card) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-1.5">
+                    <button
+                        v-for="quickLv in getQuickLevels(card)"
+                        :key="card.rarity + '-' + card.id + '-lv-' + quickLv"
+                        @click.stop="setLevelByDisplay(card, quickLv)"
+                        :class="[
+                            'quick-level-btn',
+                            isDisplayLevelActive(card, quickLv) ? 'quick-level-btn-active' : ''
+                        ]"
+                    >
+                        {{ quickLv }}
+                    </button>
                 </div>
             </div>
         </div>
@@ -178,6 +209,26 @@
                     let next = card.breakLevel + step;
                     if (next > 4) next = 4; if (next < -1) next = -1;
                     if (card.breakLevel !== next) { card.breakLevel = next; this.saveToLocal(); }
+                },
+                getQuickLevels(card) {
+                    return card.rarity === '3' ? [40, 45, 50, 55, 60] : [30, 35, 40, 45, 50];
+                },
+                getBreakLevelFromDisplay(card, displayLv) {
+                    const base = card.rarity === '3' ? 40 : 30;
+                    const breakLevel = (displayLv - base) / 5;
+                    return Number.isInteger(breakLevel) ? breakLevel : null;
+                },
+                setLevelByDisplay(card, displayLv) {
+                    const breakLevel = this.getBreakLevelFromDisplay(card, displayLv);
+                    if (breakLevel === null || breakLevel < 0 || breakLevel > 4) return;
+                    if (card.breakLevel !== breakLevel) {
+                        card.breakLevel = breakLevel;
+                        this.saveToLocal();
+                    }
+                },
+                isDisplayLevelActive(card, displayLv) {
+                    const breakLevel = this.getBreakLevelFromDisplay(card, displayLv);
+                    return breakLevel !== null && card.breakLevel === breakLevel;
                 },
                 init() {
                     const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
