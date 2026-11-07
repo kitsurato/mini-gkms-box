@@ -6,7 +6,6 @@
     <title>学园偶像大师 BOX分享工具</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="config.js"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
         
@@ -336,29 +335,15 @@
         const { createApp } = Vue;
         const STORAGE_KEY = 'gakuen_box_data_v5';
         const CIDOL_STORAGE_KEY = 'gakuen_cidol_box_data_v1';
-        const CIDOL_NAMES = {
-            ttmr: '月村手毬',
-            ssmk: '紫云清夏',
-            shro: '筱泽广',
-            kllj: '葛城莉莉娅',
-            jsna: '十王星南',
-            kcna: '仓本千奈',
-            hume: '花海佑芽',
-            hski: '花海咲季',
-            hrnm: '姬崎莉波',
-            hmsz: '秦谷美铃',
-            fktn: '藤田琴音',
-            atbm: '雨夜燕',
-            amao: '有村麻央'
-        };
 
         createApp({
             data() { 
                 return { 
                     activeMenu: 'support',
-                    cards: [], cidolSkins: [], cidolCardNames: {}, showModal: false, generatedImageSrc: null,
+                    cards: [], cidolSkins: [], cidolCardNames: {}, characterNames: {},
+                    catalogMeta: null, showModal: false, generatedImageSrc: null,
                     isGenerating: false, selectedAttrs: [], selectedRarities: [],
-                    selectedCidolCharacter: 'all', cidolVariant: '1'
+                    selectedCidolCharacter: 'all', cidolVariant: '1', loadError: ''
                 } 
             },
             computed: {
@@ -413,8 +398,8 @@
                 },
                 cidolCharacters() {
                     const presentCodes = [...new Set(this.cidolSkins.map(s => s.character))];
-                    const knownCodes = Object.keys(CIDOL_NAMES).filter(code => presentCodes.includes(code));
-                    const unknownCodes = presentCodes.filter(code => !CIDOL_NAMES[code]).sort();
+                    const knownCodes = Object.keys(this.characterNames).filter(code => presentCodes.includes(code));
+                    const unknownCodes = presentCodes.filter(code => !this.characterNames[code]).sort();
                     return [...knownCodes, ...unknownCodes].map(code => ({ code, name: this.getCidolName(code) }));
                 },
                 filteredCidolSkins() {
@@ -433,8 +418,13 @@
                     const percent = total > 0 ? Math.round((owned / total) * 100) : 0;
                     return { key, name, owned, total, percent };
                 },
+                async fetchJson(path) {
+                    const response = await fetch(path);
+                    if (!response.ok) throw new Error(`${path} HTTP ${response.status}`);
+                    return response.json();
+                },
                 getCidolName(code) {
-                    return CIDOL_NAMES[code] || code.toUpperCase();
+                    return this.characterNames[code] || code.toUpperCase();
                 },
                 cidolRarityLabel(rarity) {
                     return rarity === '3' ? 'SSR' : rarity === '2' ? 'SR' : 'R';
@@ -465,29 +455,6 @@
                     if (cell || row.length) { row.push(cell); rows.push(row); }
                     return rows;
                 },
-                async initCidolCardNames() {
-                    try {
-                        const response = await fetch('./cidol_cards.csv');
-                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                        const rows = this.parseCsv(await response.text());
-                        const [rawHeader, ...items] = rows;
-                        if (!rawHeader) return;
-                        const header = rawHeader.map(value => value.replace(/^\uFEFF/, '').trim());
-                        const idIndex = header.indexOf('编号');
-                        const nameIndex = header.indexOf('卡名');
-                        if (idIndex === -1 || nameIndex === -1) return;
-
-                        const names = {};
-                        items.forEach(row => {
-                            const id = row[idIndex] && row[idIndex].trim();
-                            const name = row[nameIndex] && row[nameIndex].trim();
-                            if (id && name) names[id] = name;
-                        });
-                        this.cidolCardNames = names;
-                    } catch (e) {
-                        console.warn('cidol_cards.csv 读取失败，角色皮肤将显示编号。', e);
-                    }
-                },
                 cidolDisplayVariant(skin) {
                     if (!skin.variants || skin.variants.includes(this.cidolVariant)) return this.cidolVariant;
                     return skin.variants.includes('1') ? '1' : '0';
@@ -498,56 +465,25 @@
                 cidolKey(skin) {
                     return `${skin.character}-${skin.rarity}-${skin.id}`;
                 },
-                buildCidolSkinsFromFiles(files, localData) {
-                    const skins = new Map();
-
-                    files.forEach(fileName => {
-                        const cleanName = decodeURIComponent(String(fileName).split('/').pop());
-                        const match = cleanName.match(/^img_general_cidol-([a-z0-9]+)-([123])-(\d{3})_([01])-full\.webp$/);
-                        if (!match) return;
-
-                        const [, character, rarity, id, variant] = match;
-                        const key = `${character}-${rarity}-${id}`;
-                        if (!skins.has(key)) {
-                            skins.set(key, { character, rarity, id, variants: new Set(), owned: !!localData[key], loaded: false });
-                        }
-                        skins.get(key).variants.add(variant);
-                    });
-
-                    this.cidolSkins = [...skins.values()]
-                        .filter(s => s.variants.has('0') || s.variants.has('1'))
-                        .map(s => ({ ...s, variants: [...s.variants] }));
-                },
-                async initCidolSkins() {
+                async initCidolCatalog() {
                     const localData = JSON.parse(localStorage.getItem(CIDOL_STORAGE_KEY) || '{}');
-
-                    try {
-                        const response = await fetch('./static/cidol-manifest.json');
-                        if (!response.ok) throw new Error(`manifest HTTP ${response.status}`);
-                        const files = await response.json();
-                        this.buildCidolSkinsFromFiles(files, localData);
-                        if (this.cidolSkins.length > 0) return;
-                    } catch (e) {
-                        console.warn('cidol-manifest.json 读取失败，尝试读取目录索引。', e);
-                    }
-
-                    if (window.location.protocol === 'file:') {
-                        alert("角色皮肤清单读取失败。请通过本地服务器访问，或确认 static/cidol-manifest.json 已存在。");
-                        return;
-                    }
-
-                    try {
-                        const response = await fetch('./static/cidol/');
-                        if (!response.ok) throw new Error(`directory HTTP ${response.status}`);
-
-                        const html = await response.text();
-                        const doc = new DOMParser().parseFromString(html, 'text/html');
-                        const files = [...doc.querySelectorAll('a[href]')].map(link => link.getAttribute('href'));
-                        this.buildCidolSkinsFromFiles(files, localData);
-                    } catch (e) {
-                        console.error(e);
-                        alert("角色皮肤清单读取失败。请确认 static/cidol-manifest.json 已提交到 GitHub。");
-                    }
+                    const rows = await this.fetchJson('./data/cidol.json');
+                    const names = {};
+                    this.cidolSkins = (rows || []).map(row => {
+                        const key = row.key || `${row.character}-${row.rarity}-${row.number}`;
+                        if (row.name) names[key] = row.name;
+                        return {
+                            character: row.character,
+                            rarity: String(row.rarity),
+                            id: String(row.number).padStart(3, '0'),
+                            variants: [...(row.variants || [])].map(String),
+                            name: row.name || '',
+                            plan: row.plan || '',
+                            owned: !!localData[key],
+                            loaded: false
+                        };
+                    }).filter(s => s.variants.includes('0') || s.variants.includes('1'));
+                    this.cidolCardNames = names;
                 },
                 toggleCidolSkin(skin) {
                     skin.owned = !skin.owned;
@@ -589,23 +525,36 @@
                     const breakLevel = this.getBreakLevelFromDisplay(card, displayLv);
                     return breakLevel !== null && card.breakLevel === breakLevel;
                 },
-                init() {
+                async initSupportCatalog() {
                     const localData = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-                    const allCards = [];
-                    for (const [attr, rarities] of Object.entries(CARD_CONFIG)) {
-                        for (const [rarity, ids] of Object.entries(rarities)) {
-                            ids.forEach(id => {
-                                allCards.push({ 
-                                    id: String(id).padStart(4, '0'), 
-                                    rarity: String(rarity), 
-                                    breakLevel: localData[`${rarity}-${String(id).padStart(4, '0')}`] !== undefined ? localData[`${rarity}-${String(id).padStart(4, '0')}`] : -1, 
-                                    attribute: attr.toLowerCase(), 
-                                    loaded: false 
-                                });
-                            });
-                        }
+                    const rows = await this.fetchJson('./data/support.json');
+                    this.cards = (rows || []).map(row => {
+                        const rarity = String(row.rarity);
+                        const id = String(row.number).padStart(4, '0');
+                        const key = `${rarity}-${id}`;
+                        return {
+                            id,
+                            rarity,
+                            name: row.name || '',
+                            plan: row.plan || '',
+                            breakLevel: localData[key] !== undefined ? localData[key] : -1,
+                            attribute: String(row.attr || '').toLowerCase(),
+                            loaded: false
+                        };
+                    });
+                },
+                async initCatalogs() {
+                    try {
+                        this.catalogMeta = await this.fetchJson('./data/meta.json');
+                        this.characterNames = await this.fetchJson('./data/characters.json');
+                        await this.initSupportCatalog();
+                        await this.initCidolCatalog();
+                        this.loadError = '';
+                    } catch (e) {
+                        console.error(e);
+                        this.loadError = e && e.message ? e.message : String(e);
+                        alert(`目录数据读取失败：${this.loadError}\n请确认已通过插件「上传网站」推送 data/*.json`);
                     }
-                    this.cards = allCards;
                 },
                 toggleFilter(attr) {
                     const idx = this.selectedAttrs.indexOf(attr);
@@ -838,7 +787,7 @@
                     document.body.removeChild(el); alert("已复制角色皮肤代码");
                 }
             },
-            async mounted() { this.init(); await this.initCidolCardNames(); await this.initCidolSkins(); }
+            async mounted() { await this.initCatalogs(); }
         }).mount('#app');
     </script>
 </body>

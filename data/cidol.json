@@ -1,0 +1,6554 @@
+[
+  {
+    "key": "amao-1-000",
+    "character": "amao",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-1-000_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 80,
+      "vi": 90,
+      "vo_rate": 20.0,
+      "da_rate": 6.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-1-001",
+    "character": "amao",
+    "rarity": "1",
+    "number": "001",
+    "name": "初恋",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-1-001_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 80,
+      "vi": 90,
+      "vo_rate": 20.0,
+      "da_rate": 6.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-2-000",
+    "character": "amao",
+    "rarity": "2",
+    "number": "000",
+    "name": "はじまりはカッコよく",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-2-000_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 85,
+      "vi": 95,
+      "vo_rate": 21.0,
+      "da_rate": 7.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-000",
+    "character": "amao",
+    "rarity": "3",
+    "number": "000",
+    "name": "Fluorite",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-000_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-001",
+    "character": "amao",
+    "rarity": "3",
+    "number": "001",
+    "name": "キミとセミブルー",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-001_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-002",
+    "character": "amao",
+    "rarity": "3",
+    "number": "002",
+    "name": "Feel Jewel Dream",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-002_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-003",
+    "character": "amao",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24祭",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-005",
+    "character": "amao",
+    "rarity": "3",
+    "number": "005",
+    "name": "'24ハロウィン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-006",
+    "character": "amao",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-007",
+    "character": "amao",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-007_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-008",
+    "character": "amao",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25バレンタイン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-009",
+    "character": "amao",
+    "rarity": "3",
+    "number": "009",
+    "name": "雪解けに",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-009_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-010",
+    "character": "amao",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-011",
+    "character": "amao",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-012",
+    "character": "amao",
+    "rarity": "3",
+    "number": "012",
+    "name": "'25Howling over the World",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-012_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-013",
+    "character": "amao",
+    "rarity": "3",
+    "number": "013",
+    "name": "ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-013_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-014",
+    "character": "amao",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-015",
+    "character": "amao",
+    "rarity": "3",
+    "number": "015",
+    "name": "見て",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-015_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-016",
+    "character": "amao",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-017",
+    "character": "amao",
+    "rarity": "3",
+    "number": "017",
+    "name": "SUGAR FLAVOR",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-017_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-018",
+    "character": "amao",
+    "rarity": "3",
+    "number": "018",
+    "name": "標",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-018_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 90,
+      "vi": 100,
+      "vo_rate": 22.0,
+      "da_rate": 8.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "amao-3-020",
+    "character": "amao",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-021",
+    "character": "amao",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "amao-3-022",
+    "character": "amao",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-amao-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-1-000",
+    "character": "atbm",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-1-000_1-full.webp",
+    "stats": {
+      "vo": 105,
+      "da": 130,
+      "vi": 100,
+      "vo_rate": 15.0,
+      "da_rate": 18.0,
+      "vi_rate": 11.0
+    }
+  },
+  {
+    "key": "atbm-2-000",
+    "character": "atbm",
+    "rarity": "2",
+    "number": "000",
+    "name": "初志貫徹",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-2-000_1-full.webp",
+    "stats": {
+      "vo": 110,
+      "da": 135,
+      "vi": 105,
+      "vo_rate": 16.0,
+      "da_rate": 19.0,
+      "vi_rate": 12.0
+    }
+  },
+  {
+    "key": "atbm-3-000",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "000",
+    "name": "理論武装して",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-000_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 140,
+      "vi": 110,
+      "vo_rate": 17.0,
+      "da_rate": 20.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "atbm-3-001",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "001",
+    "name": "'26夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-001_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-002",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "002",
+    "name": "'26祭",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-002_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-003",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "003",
+    "name": "'26ハロウィン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-004",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "004",
+    "name": "'26クリスマス",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-005",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "005",
+    "name": "'26バレンタイン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-006",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "006",
+    "name": "'26ひな祭り",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-007",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "007",
+    "name": "'26桜",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-008",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "008",
+    "name": "'26アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-009",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "009",
+    "name": "'26Howling over the World",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-010",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "010",
+    "name": "'26ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-011",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "011",
+    "name": "'26がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-012",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "012",
+    "name": "Campus mode!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-012_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 140,
+      "vi": 110,
+      "vo_rate": 17.0,
+      "da_rate": 20.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "atbm-3-013",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "013",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-015",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "015",
+    "name": "ガラクタロード",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-015_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 140,
+      "vi": 110,
+      "vo_rate": 17.0,
+      "da_rate": 20.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "atbm-3-016",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26GO MY WAY!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-017",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "017",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-017_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "atbm-3-018",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "018",
+    "name": "クライアイ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-018_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 140,
+      "vi": 110,
+      "vo_rate": 17.0,
+      "da_rate": 20.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "atbm-3-019",
+    "character": "atbm",
+    "rarity": "3",
+    "number": "019",
+    "name": "'26小悪魔",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-atbm-3-019_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-1-000",
+    "character": "fktn",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-1-000_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 80,
+      "vi": 110,
+      "vo_rate": 6.0,
+      "da_rate": 23.5,
+      "vi_rate": 21.5
+    }
+  },
+  {
+    "key": "fktn-1-001",
+    "character": "fktn",
+    "rarity": "1",
+    "number": "001",
+    "name": "初声",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-1-001_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 80,
+      "vi": 110,
+      "vo_rate": 6.0,
+      "da_rate": 23.5,
+      "vi_rate": 21.5
+    }
+  },
+  {
+    "key": "fktn-2-000",
+    "character": "fktn",
+    "rarity": "2",
+    "number": "000",
+    "name": "カワイイ♡はじめました",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-2-000_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 85,
+      "vi": 115,
+      "vo_rate": 7.0,
+      "da_rate": 23.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-000",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "000",
+    "name": "世界一可愛い私",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-000_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-001",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "001",
+    "name": "Yellow Big Bang！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-001_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-002",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "002",
+    "name": "冠菊",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-002_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-003",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-005",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "005",
+    "name": "'24ハロウィン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-006",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "006",
+    "name": "White Night! White Wish!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-006_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-007",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-007_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-008",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25バレンタイン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-009",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ひな祭り",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-010",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-011",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "011",
+    "name": "雨上がりのアイリス",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-011_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-012",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "012",
+    "name": "'25アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-012_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-013",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "013",
+    "name": "自己肯定感爆上げ↑↑しゅきしゅきソング",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-013_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-014",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25Howling over the World",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-015",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-016",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "016",
+    "name": "がむしゃらに行こう！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-016_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-017",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "017",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-017_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-019",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "019",
+    "name": "GO MY WAY!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-019_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 120,
+      "vo_rate": 8.0,
+      "da_rate": 24.5,
+      "vi_rate": 22.5
+    }
+  },
+  {
+    "key": "fktn-3-021",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "fktn-3-022",
+    "character": "fktn",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-fktn-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-1-000",
+    "character": "hmsz",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-1-000_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 25.0,
+      "da_rate": 8.0,
+      "vi_rate": 16.0
+    }
+  },
+  {
+    "key": "hmsz-1-001",
+    "character": "hmsz",
+    "rarity": "1",
+    "number": "001",
+    "name": "初陣",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-1-001_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 25.0,
+      "da_rate": 8.0,
+      "vi_rate": 16.0
+    }
+  },
+  {
+    "key": "hmsz-2-000",
+    "character": "hmsz",
+    "rarity": "2",
+    "number": "000",
+    "name": "ゆっくり、一歩ずつ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-2-000_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 120,
+      "vi": 130,
+      "vo_rate": 26.0,
+      "da_rate": 9.0,
+      "vi_rate": 17.0
+    }
+  },
+  {
+    "key": "hmsz-3-000",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "000",
+    "name": "ツキノカメ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-000_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-001",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "001",
+    "name": "'25夏",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-001_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-002",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "002",
+    "name": "'25祭",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-002_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-003",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "003",
+    "name": "'25ハロウィン",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-004",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "004",
+    "name": "'25クリスマス",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-005",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "005",
+    "name": "Campus mode!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-005_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-006",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "006",
+    "name": "'26バレンタイン",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-007",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "007",
+    "name": "'26ひな祭り",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-008",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "008",
+    "name": "'26桜",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-009",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25アニメイト",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-010",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "010",
+    "name": "Star-mine",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-010_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-011",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "011",
+    "name": "'26Howling over the World",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-012",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "012",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-012_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-013",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-014",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "014",
+    "name": "Superlative",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-014_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-015",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "015",
+    "name": "ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-015_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-016",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "016",
+    "name": "VEIL",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-016_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-018",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "018",
+    "name": "ガラクタロード",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-018_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-019",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "019",
+    "name": "'26GO MY WAY!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-019_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hmsz-3-020",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "020",
+    "name": "「ねえ、言っちゃうよ。」",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-020_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 125,
+      "vi": 135,
+      "vo_rate": 27.0,
+      "da_rate": 10.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "hmsz-3-021",
+    "character": "hmsz",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26小悪魔",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hmsz-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-1-000",
+    "character": "hrnm",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-1-000_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 100,
+      "vi": 100,
+      "vo_rate": 9.0,
+      "da_rate": 19.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-1-001",
+    "character": "hrnm",
+    "rarity": "1",
+    "number": "001",
+    "name": "初心",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-1-001_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 100,
+      "vi": 100,
+      "vo_rate": 9.0,
+      "da_rate": 19.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-2-000",
+    "character": "hrnm",
+    "rarity": "2",
+    "number": "000",
+    "name": "『私らしさ』のはじまり",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-2-000_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 105,
+      "vi": 105,
+      "vo_rate": 10.0,
+      "da_rate": 20.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-000",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "000",
+    "name": "clumsy trick",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-000_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-001",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "001",
+    "name": "キミとセミブルー",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-001_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-002",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "002",
+    "name": "L.U.V",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-002_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 105,
+      "vi": 105,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-003",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24祭",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-004",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "004",
+    "name": "ようこそ初星温泉",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-004_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-005",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "005",
+    "name": "'24ハロウィン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-006",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-007",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-007_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-008",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "008",
+    "name": "ハッピーミルフィーユ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-008_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-009",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ひな祭り",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-010",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-011",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-012",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "012",
+    "name": "Howling over the World",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-012_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-013",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "013",
+    "name": "36℃ U･B･U",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-013_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-014",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-015",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-016",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-017",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "017",
+    "name": "ガラクタロード",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-017_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-018",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "018",
+    "name": "SUGAR FLAVOR",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-018_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 110,
+      "vi": 110,
+      "vo_rate": 11.0,
+      "da_rate": 21.5,
+      "vi_rate": 23.5
+    }
+  },
+  {
+    "key": "hrnm-3-020",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-021",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hrnm-3-022",
+    "character": "hrnm",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hrnm-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-1-000",
+    "character": "hski",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-1-000_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 95,
+      "vo_rate": 15.5,
+      "da_rate": 15.5,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "hski-1-001",
+    "character": "hski",
+    "rarity": "1",
+    "number": "001",
+    "name": "初声",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-1-001_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 90,
+      "vi": 95,
+      "vo_rate": 15.5,
+      "da_rate": 15.5,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "hski-2-000",
+    "character": "hski",
+    "rarity": "2",
+    "number": "000",
+    "name": "わたしが一番！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-2-000_1-full.webp",
+    "stats": {
+      "vo": 95,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "hski-3-000",
+    "character": "hski",
+    "rarity": "3",
+    "number": "000",
+    "name": "Fighting My Way",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-000_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-001",
+    "character": "hski",
+    "rarity": "3",
+    "number": "001",
+    "name": "Boom Boom Pow",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-001_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-002",
+    "character": "hski",
+    "rarity": "3",
+    "number": "002",
+    "name": "冠菊",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-002_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-003",
+    "character": "hski",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24夏",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-005",
+    "character": "hski",
+    "rarity": "3",
+    "number": "005",
+    "name": "'24ハロウィン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-006",
+    "character": "hski",
+    "rarity": "3",
+    "number": "006",
+    "name": "古今東西ちょちょいのちょい",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-006_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-007",
+    "character": "hski",
+    "rarity": "3",
+    "number": "007",
+    "name": "'24クリスマス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-008",
+    "character": "hski",
+    "rarity": "3",
+    "number": "008",
+    "name": "Campus mode!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-008_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-009",
+    "character": "hski",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25バレンタイン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-010",
+    "character": "hski",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25ひな祭り",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-011",
+    "character": "hski",
+    "rarity": "3",
+    "number": "011",
+    "name": "桜フォトグラフ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-011_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-012",
+    "character": "hski",
+    "rarity": "3",
+    "number": "012",
+    "name": "雨上がりのアイリス",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-012_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-013",
+    "character": "hski",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25Howling over the World",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-014",
+    "character": "hski",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-015",
+    "character": "hski",
+    "rarity": "3",
+    "number": "015",
+    "name": "がむしゃらに行こう！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-015_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-016",
+    "character": "hski",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-017",
+    "character": "hski",
+    "rarity": "3",
+    "number": "017",
+    "name": "Wildest Flower",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-017_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-018",
+    "character": "hski",
+    "rarity": "3",
+    "number": "018",
+    "name": "ガラクタロード",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-018_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-019",
+    "character": "hski",
+    "rarity": "3",
+    "number": "019",
+    "name": "GO MY WAY!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-019_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hski-3-021",
+    "character": "hski",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hski-3-022",
+    "character": "hski",
+    "rarity": "3",
+    "number": "022",
+    "name": "Agitato",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hski-3-022_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 100,
+      "vi": 105,
+      "vo_rate": 16.5,
+      "da_rate": 16.5,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "hume-1-000",
+    "character": "hume",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-1-000_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 85,
+      "vi": 90,
+      "vo_rate": 19.0,
+      "da_rate": 22.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "hume-1-001",
+    "character": "hume",
+    "rarity": "1",
+    "number": "001",
+    "name": "初陣",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-1-001_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 85,
+      "vi": 90,
+      "vo_rate": 19.0,
+      "da_rate": 22.0,
+      "vi_rate": 13.0
+    }
+  },
+  {
+    "key": "hume-2-000",
+    "character": "hume",
+    "rarity": "2",
+    "number": "000",
+    "name": "アイドル、はじめっ！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-2-000_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 90,
+      "vi": 95,
+      "vo_rate": 19.0,
+      "da_rate": 23.0,
+      "vi_rate": 14.0
+    }
+  },
+  {
+    "key": "hume-3-000",
+    "character": "hume",
+    "rarity": "3",
+    "number": "000",
+    "name": "The Rolling Riceball",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-000_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-001",
+    "character": "hume",
+    "rarity": "3",
+    "number": "001",
+    "name": "'24夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-001_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-002",
+    "character": "hume",
+    "rarity": "3",
+    "number": "002",
+    "name": "'24祭",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-002_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-004",
+    "character": "hume",
+    "rarity": "3",
+    "number": "004",
+    "name": "'24ハロウィン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-005",
+    "character": "hume",
+    "rarity": "3",
+    "number": "005",
+    "name": "White Night! White Wish!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-005_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-006",
+    "character": "hume",
+    "rarity": "3",
+    "number": "006",
+    "name": "Campus mode!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-006_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-007",
+    "character": "hume",
+    "rarity": "3",
+    "number": "007",
+    "name": "'26バレンタイン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-008",
+    "character": "hume",
+    "rarity": "3",
+    "number": "008",
+    "name": "'26ひな祭り",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-009",
+    "character": "hume",
+    "rarity": "3",
+    "number": "009",
+    "name": "グースーピー",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-009_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-010",
+    "character": "hume",
+    "rarity": "3",
+    "number": "010",
+    "name": "'26桜",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-011",
+    "character": "hume",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-012",
+    "character": "hume",
+    "rarity": "3",
+    "number": "012",
+    "name": "Star-mine",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-012_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-013",
+    "character": "hume",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25Howling over the World",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-014",
+    "character": "hume",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-015",
+    "character": "hume",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-016",
+    "character": "hume",
+    "rarity": "3",
+    "number": "016",
+    "name": "ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-016_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-017",
+    "character": "hume",
+    "rarity": "3",
+    "number": "017",
+    "name": "真っ白いページと水彩の主人公",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-017_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-018",
+    "character": "hume",
+    "rarity": "3",
+    "number": "018",
+    "name": "GO MY WAY!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-018_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "hume-3-021",
+    "character": "hume",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "hume-3-022",
+    "character": "hume",
+    "rarity": "3",
+    "number": "022",
+    "name": "Agitato",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-hume-3-022_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 95,
+      "vi": 100,
+      "vo_rate": 20.0,
+      "da_rate": 23.0,
+      "vi_rate": 15.0
+    }
+  },
+  {
+    "key": "jsna-1-000",
+    "character": "jsna",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-1-000_1-full.webp",
+    "stats": {
+      "vo": 155,
+      "da": 105,
+      "vi": 120,
+      "vo_rate": 13.0,
+      "da_rate": 6.0,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "jsna-1-001",
+    "character": "jsna",
+    "rarity": "1",
+    "number": "001",
+    "name": "初陣",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-1-001_1-full.webp",
+    "stats": {
+      "vo": 155,
+      "da": 105,
+      "vi": 120,
+      "vo_rate": 13.0,
+      "da_rate": 6.0,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "jsna-2-000",
+    "character": "jsna",
+    "rarity": "2",
+    "number": "000",
+    "name": "一番星",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-2-000_1-full.webp",
+    "stats": {
+      "vo": 165,
+      "da": 115,
+      "vi": 130,
+      "vo_rate": 14.0,
+      "da_rate": 7.0,
+      "vi_rate": 19.5
+    }
+  },
+  {
+    "key": "jsna-3-000",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "000",
+    "name": "小さな野望",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-000_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-001",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "001",
+    "name": "'25クリスマス",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-001_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-002",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "002",
+    "name": "Campus mode!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-002_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-003",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "003",
+    "name": "ハッピーミルフィーユ",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-003_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-004",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "004",
+    "name": "'25ひな祭り",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-005",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "005",
+    "name": "'25桜",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-006",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "006",
+    "name": "Our Chant",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-006_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-007",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "007",
+    "name": "'25夏",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-008",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25祭",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-009",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ハロウィン",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-010",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25アニメイト",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-011",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "011",
+    "name": "Star-mine",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-011_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-012",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "012",
+    "name": "'25Howling over the World",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-012_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-013",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-014",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-015",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "015",
+    "name": "赤裸々",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-015_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-016",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "016",
+    "name": "ENDLESS DANCE",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-016_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-017",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "017",
+    "name": "ガラクタロード",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-017_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-019",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "019",
+    "name": "'26GO MY WAY!!",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-019_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "jsna-3-020",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "020",
+    "name": "「ねえ、言っちゃうよ。」",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-020_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-021",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "021",
+    "name": "Roar",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-021_1-full.webp",
+    "stats": {
+      "vo": 175,
+      "da": 125,
+      "vi": 140,
+      "vo_rate": 15.0,
+      "da_rate": 8.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "jsna-3-022",
+    "character": "jsna",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-jsna-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-1-000",
+    "character": "kcna",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-1-000_1-full.webp",
+    "stats": {
+      "vo": 65,
+      "da": 105,
+      "vi": 115,
+      "vo_rate": 9.0,
+      "da_rate": 24.0,
+      "vi_rate": 17.5
+    }
+  },
+  {
+    "key": "kcna-1-001",
+    "character": "kcna",
+    "rarity": "1",
+    "number": "001",
+    "name": "初心",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-1-001_1-full.webp",
+    "stats": {
+      "vo": 65,
+      "da": 105,
+      "vi": 115,
+      "vo_rate": 9.0,
+      "da_rate": 24.0,
+      "vi_rate": 17.5
+    }
+  },
+  {
+    "key": "kcna-2-000",
+    "character": "kcna",
+    "rarity": "2",
+    "number": "000",
+    "name": "胸を張って一歩ずつ",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-2-000_1-full.webp",
+    "stats": {
+      "vo": 70,
+      "da": 110,
+      "vi": 120,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 18.5
+    }
+  },
+  {
+    "key": "kcna-3-000",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "000",
+    "name": "Wonder Scale",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-000_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-001",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "001",
+    "name": "日々、発見的ステップ！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-001_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-002",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "002",
+    "name": "仮装狂騒曲",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-002_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-003",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-004",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "004",
+    "name": "'24祭",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-005",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "005",
+    "name": "ようこそ初星温泉",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-005_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-006",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-007",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-007_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-008",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25バレンタイン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-009",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "009",
+    "name": "雪解けに",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-009_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-010",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-011",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-012",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "012",
+    "name": "Howling over the World",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-012_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-013",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-014",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "014",
+    "name": "空と約束",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-014_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-015",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-016",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "016",
+    "name": "みちなるひろがる",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-016_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-017",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "017",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-017_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-018",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "018",
+    "name": "標",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-018_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-019",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "019",
+    "name": "ガラクタロード",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-019_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 115,
+      "vi": 125,
+      "vo_rate": 10.0,
+      "da_rate": 24.0,
+      "vi_rate": 20.5
+    }
+  },
+  {
+    "key": "kcna-3-020",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-021",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kcna-3-022",
+    "character": "kcna",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kcna-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-1-000",
+    "character": "kllj",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-1-000_1-full.webp",
+    "stats": {
+      "vo": 70,
+      "da": 90,
+      "vi": 105,
+      "vo_rate": 16.0,
+      "da_rate": 20.0,
+      "vi_rate": 16.0
+    }
+  },
+  {
+    "key": "kllj-1-001",
+    "character": "kllj",
+    "rarity": "1",
+    "number": "001",
+    "name": "初心",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-1-001_1-full.webp",
+    "stats": {
+      "vo": 70,
+      "da": 90,
+      "vi": 105,
+      "vo_rate": 16.0,
+      "da_rate": 20.0,
+      "vi_rate": 16.0
+    }
+  },
+  {
+    "key": "kllj-2-000",
+    "character": "kllj",
+    "rarity": "2",
+    "number": "000",
+    "name": "一つ踏み出した先に",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-2-000_1-full.webp",
+    "stats": {
+      "vo": 75,
+      "da": 95,
+      "vi": 110,
+      "vo_rate": 17.0,
+      "da_rate": 20.0,
+      "vi_rate": 17.0
+    }
+  },
+  {
+    "key": "kllj-3-000",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "000",
+    "name": "白線",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-000_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-001",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "001",
+    "name": "冠菊",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-001_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-002",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "002",
+    "name": "'24夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-002_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-004",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "004",
+    "name": "'24ハロウィン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-005",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "005",
+    "name": "White Night! White Wish!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-005_1-full.webp",
+    "stats": {
+      "vo": 85,
+      "da": 105,
+      "vi": 120,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-006",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "006",
+    "name": "Campus mode!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-006_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-007",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "007",
+    "name": "'25バレンタイン",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-007_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-008",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "008",
+    "name": "極光",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-008_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-009",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ひな祭り",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-010",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "010",
+    "name": "桜フォトグラフ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-010_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-011",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-012",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "012",
+    "name": "Howling over the World",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-012_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-013",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-014",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-015",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "015",
+    "name": "Atmosphere",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-015_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-016",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-017",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "017",
+    "name": "ときめきエモーション",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-017_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-018",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "018",
+    "name": "ガラクタロード",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-018_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "kllj-3-020",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-021",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "kllj-3-022",
+    "character": "kllj",
+    "rarity": "3",
+    "number": "022",
+    "name": "Agitato",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-kllj-3-022_1-full.webp",
+    "stats": {
+      "vo": 80,
+      "da": 100,
+      "vi": 115,
+      "vo_rate": 18.0,
+      "da_rate": 20.0,
+      "vi_rate": 18.0
+    }
+  },
+  {
+    "key": "shro-1-000",
+    "character": "shro",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-1-000_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 110,
+      "vi": 70,
+      "vo_rate": 22.0,
+      "da_rate": 16.5,
+      "vi_rate": 8.0
+    }
+  },
+  {
+    "key": "shro-1-001",
+    "character": "shro",
+    "rarity": "1",
+    "number": "001",
+    "name": "初恋",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-1-001_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 110,
+      "vi": 70,
+      "vo_rate": 22.0,
+      "da_rate": 16.5,
+      "vi_rate": 8.0
+    }
+  },
+  {
+    "key": "shro-2-000",
+    "character": "shro",
+    "rarity": "2",
+    "number": "000",
+    "name": "一番向いてないこと",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-2-000_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 115,
+      "vi": 75,
+      "vo_rate": 23.0,
+      "da_rate": 18.5,
+      "vi_rate": 9.0
+    }
+  },
+  {
+    "key": "shro-3-000",
+    "character": "shro",
+    "rarity": "3",
+    "number": "000",
+    "name": "光景",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-000_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-001",
+    "character": "shro",
+    "rarity": "3",
+    "number": "001",
+    "name": "コントラスト",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-001_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-002",
+    "character": "shro",
+    "rarity": "3",
+    "number": "002",
+    "name": "仮装狂騒曲",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-002_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-003",
+    "character": "shro",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24夏",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-004",
+    "character": "shro",
+    "rarity": "3",
+    "number": "004",
+    "name": "'24祭",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-006",
+    "character": "shro",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-007",
+    "character": "shro",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-007_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-008",
+    "character": "shro",
+    "rarity": "3",
+    "number": "008",
+    "name": "ハッピーミルフィーユ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-008_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-009",
+    "character": "shro",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ひな祭り",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-010",
+    "character": "shro",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-011",
+    "character": "shro",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-012",
+    "character": "shro",
+    "rarity": "3",
+    "number": "012",
+    "name": "サンフェーデッド",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-012_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-013",
+    "character": "shro",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25Howling over the World",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-014",
+    "character": "shro",
+    "rarity": "3",
+    "number": "014",
+    "name": "ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-014_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-015",
+    "character": "shro",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-016",
+    "character": "shro",
+    "rarity": "3",
+    "number": "016",
+    "name": "みちなるひろがる",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-016_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-017",
+    "character": "shro",
+    "rarity": "3",
+    "number": "017",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-017_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-018",
+    "character": "shro",
+    "rarity": "3",
+    "number": "018",
+    "name": "ガラクタロード",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-018_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-020",
+    "character": "shro",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-021",
+    "character": "shro",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "shro-3-022",
+    "character": "shro",
+    "rarity": "3",
+    "number": "022",
+    "name": "め",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-022_1-full.webp",
+    "stats": {
+      "vo": 125,
+      "da": 120,
+      "vi": 80,
+      "vo_rate": 23.0,
+      "da_rate": 19.5,
+      "vi_rate": 10.0
+    }
+  },
+  {
+    "key": "shro-3-023",
+    "character": "shro",
+    "rarity": "3",
+    "number": "023",
+    "name": "'26小悪魔",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-shro-3-023_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-1-000",
+    "character": "ssmk",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-1-000_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 105,
+      "vi": 80,
+      "vo_rate": 7.0,
+      "da_rate": 23.0,
+      "vi_rate": 21.0
+    }
+  },
+  {
+    "key": "ssmk-1-001",
+    "character": "ssmk",
+    "rarity": "1",
+    "number": "001",
+    "name": "初恋",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-1-001_1-full.webp",
+    "stats": {
+      "vo": 90,
+      "da": 105,
+      "vi": 80,
+      "vo_rate": 7.0,
+      "da_rate": 23.0,
+      "vi_rate": 21.0
+    }
+  },
+  {
+    "key": "ssmk-2-000",
+    "character": "ssmk",
+    "rarity": "2",
+    "number": "000",
+    "name": "夢へのリスタート",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-2-000_1-full.webp",
+    "stats": {
+      "vo": 95,
+      "da": 110,
+      "vi": 85,
+      "vo_rate": 8.0,
+      "da_rate": 23.0,
+      "vi_rate": 22.0
+    }
+  },
+  {
+    "key": "ssmk-3-000",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "000",
+    "name": "Tame-Lie-One-Step",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-000_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-001",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "001",
+    "name": "キミとセミブルー",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-001_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-002",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "002",
+    "name": "カクシタワタシ",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-002_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-003",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24祭",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-005",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "005",
+    "name": "'24ハロウィン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-005_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-006",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-007",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-007_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-008",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25バレンタイン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-009",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "009",
+    "name": "'25ひな祭り",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-009_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-010",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "010",
+    "name": "桜フォトグラフ",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-010_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-011",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "011",
+    "name": "'25アニメイト",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-011_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-012",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "012",
+    "name": "Love & Joy",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-012_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-013",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25Howling over the World",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-014",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "014",
+    "name": "ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-014_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-015",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "015",
+    "name": "'25がむしゃらに行こう！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-015_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-016",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "016",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-016_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-017",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "017",
+    "name": "ときめきエモーション",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-017_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-018",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "018",
+    "name": "標",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-018_1-full.webp",
+    "stats": {
+      "vo": 100,
+      "da": 115,
+      "vi": 90,
+      "vo_rate": 9.0,
+      "da_rate": 23.0,
+      "vi_rate": 23.0
+    }
+  },
+  {
+    "key": "ssmk-3-020",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-021",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "021",
+    "name": "'26水着",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-021_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ssmk-3-022",
+    "character": "ssmk",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ssmk-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-1-000",
+    "character": "ttmr",
+    "rarity": "1",
+    "number": "000",
+    "name": "学園生活",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-1-000_1-full.webp",
+    "stats": {
+      "vo": 110,
+      "da": 90,
+      "vi": 70,
+      "vo_rate": 23.0,
+      "da_rate": 20.5,
+      "vi_rate": 6.5
+    }
+  },
+  {
+    "key": "ttmr-1-001",
+    "character": "ttmr",
+    "rarity": "1",
+    "number": "001",
+    "name": "初声",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-1-001_1-full.webp",
+    "stats": {
+      "vo": 110,
+      "da": 90,
+      "vi": 70,
+      "vo_rate": 23.0,
+      "da_rate": 20.5,
+      "vi_rate": 6.5
+    }
+  },
+  {
+    "key": "ttmr-2-000",
+    "character": "ttmr",
+    "rarity": "2",
+    "number": "000",
+    "name": "一匹狼",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-2-000_1-full.webp",
+    "stats": {
+      "vo": 115,
+      "da": 95,
+      "vi": 75,
+      "vo_rate": 24.0,
+      "da_rate": 20.5,
+      "vi_rate": 7.5
+    }
+  },
+  {
+    "key": "ttmr-3-000",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "000",
+    "name": "Luna say maybe",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-000_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-001",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "001",
+    "name": "アイヴイ",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-001_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-002",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "002",
+    "name": "仮装狂騒曲",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-002_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-003",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "003",
+    "name": "'24夏",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-003_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-004",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "004",
+    "name": "'24祭",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-004_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-006",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "006",
+    "name": "'24クリスマス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-006_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-007",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "007",
+    "name": "Campus mode!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-007_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-008",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "008",
+    "name": "'25バレンタイン",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-008_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-009",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "009",
+    "name": "雪解けに",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-009_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-010",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "010",
+    "name": "'25桜",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-010_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-011",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "011",
+    "name": "雨上がりのアイリス",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-011_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-012",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "012",
+    "name": "'25アニメイト",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-012_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-013",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "013",
+    "name": "'25Howling over the World",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-013_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-014",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "014",
+    "name": "'25ミラクルナナウ(ﾟ∀ﾟ)！",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-014_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-015",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "015",
+    "name": "がむしゃらに行こう！",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-015_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-016",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "016",
+    "name": "一体いつから",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-016_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-017",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "017",
+    "name": "'26ENDLESS DANCE",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-017_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-018",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "018",
+    "name": "ガラクタロード",
+    "plan": "Logic",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-018_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-020",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "020",
+    "name": "'26GO MY WAY!!",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-020_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  },
+  {
+    "key": "ttmr-3-021",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "021",
+    "name": "「ねえ、言っちゃうよ。」",
+    "plan": "Anomaly",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-021_1-full.webp",
+    "stats": {
+      "vo": 120,
+      "da": 100,
+      "vi": 80,
+      "vo_rate": 24.0,
+      "da_rate": 21.5,
+      "vi_rate": 8.5
+    }
+  },
+  {
+    "key": "ttmr-3-022",
+    "character": "ttmr",
+    "rarity": "3",
+    "number": "022",
+    "name": "'26小悪魔",
+    "plan": "Sense",
+    "variants": [
+      "0",
+      "1"
+    ],
+    "image": "static/cidol/img_general_cidol-ttmr-3-022_1-full.webp",
+    "stats": {
+      "vo": 0,
+      "da": 0,
+      "vi": 0,
+      "vo_rate": 0,
+      "da_rate": 0,
+      "vi_rate": 0
+    }
+  }
+]

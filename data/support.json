@@ -1,0 +1,1784 @@
+[
+  {
+    "id": "s_card-2-0000",
+    "rarity": "2",
+    "number": "0000",
+    "attr": "vi",
+    "name": "体当たりのラブコール",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0000.webp"
+  },
+  {
+    "id": "s_card-2-0001",
+    "rarity": "2",
+    "number": "0001",
+    "attr": "vo",
+    "name": "今はあえて、背を向けて",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0001.webp"
+  },
+  {
+    "id": "s_card-2-0002",
+    "rarity": "2",
+    "number": "0002",
+    "attr": "vo",
+    "name": "のらりくらりしっかり",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0002.webp"
+  },
+  {
+    "id": "s_card-2-0003",
+    "rarity": "2",
+    "number": "0003",
+    "attr": "vo",
+    "name": "愛無き暗記は難しい",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0003.webp"
+  },
+  {
+    "id": "s_card-2-0004",
+    "rarity": "2",
+    "number": "0004",
+    "attr": "vi",
+    "name": "てとりあしとり",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0004.webp"
+  },
+  {
+    "id": "s_card-2-0005",
+    "rarity": "2",
+    "number": "0005",
+    "attr": "vi",
+    "name": "ほっぺた、ぷに",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0005.webp"
+  },
+  {
+    "id": "s_card-2-0006",
+    "rarity": "2",
+    "number": "0006",
+    "attr": "da",
+    "name": "魅惑の大腿四頭筋",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0006.webp"
+  },
+  {
+    "id": "s_card-2-0007",
+    "rarity": "2",
+    "number": "0007",
+    "attr": "da",
+    "name": "ふわふわでワクワク",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0007.webp"
+  },
+  {
+    "id": "s_card-2-0008",
+    "rarity": "2",
+    "number": "0008",
+    "attr": "da",
+    "name": "嬉し恥ずかし夢心地",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0008.webp"
+  },
+  {
+    "id": "s_card-2-0009",
+    "rarity": "2",
+    "number": "0009",
+    "attr": "da",
+    "name": "実食！例のSSD",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0009.webp"
+  },
+  {
+    "id": "s_card-2-0010",
+    "rarity": "2",
+    "number": "0010",
+    "attr": "vo",
+    "name": "マイペース、マイライフ",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0010.webp"
+  },
+  {
+    "id": "s_card-2-0011",
+    "rarity": "2",
+    "number": "0011",
+    "attr": "vi",
+    "name": "思惑とガクガク",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0011.webp"
+  },
+  {
+    "id": "s_card-2-0012",
+    "rarity": "2",
+    "number": "0012",
+    "attr": "vo",
+    "name": "ほっとけないクラスメイト",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0012.webp"
+  },
+  {
+    "id": "s_card-2-0013",
+    "rarity": "2",
+    "number": "0013",
+    "attr": "vi",
+    "name": "いつか、きっと花開く",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0013.webp"
+  },
+  {
+    "id": "s_card-2-0014",
+    "rarity": "2",
+    "number": "0014",
+    "attr": "as",
+    "name": "はじめてのお友達",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0014.webp"
+  },
+  {
+    "id": "s_card-2-0015",
+    "rarity": "2",
+    "number": "0015",
+    "attr": "vo",
+    "name": "イヤホンはんぶんこ",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0015.webp"
+  },
+  {
+    "id": "s_card-2-0016",
+    "rarity": "2",
+    "number": "0016",
+    "attr": "da",
+    "name": "どりゃぎゃ",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0016.webp"
+  },
+  {
+    "id": "s_card-2-0017",
+    "rarity": "2",
+    "number": "0017",
+    "attr": "vi",
+    "name": "パクパクもぐもぐ",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0017.webp"
+  },
+  {
+    "id": "s_card-2-0018",
+    "rarity": "2",
+    "number": "0018",
+    "attr": "vi",
+    "name": "かちこちストレッチ",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0018.webp"
+  },
+  {
+    "id": "s_card-2-0019",
+    "rarity": "2",
+    "number": "0019",
+    "attr": "da",
+    "name": "パシャっとキメポ",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0019.webp"
+  },
+  {
+    "id": "s_card-2-0020",
+    "rarity": "2",
+    "number": "0020",
+    "attr": "vo",
+    "name": "海、楽しまなきゃ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0020.webp"
+  },
+  {
+    "id": "s_card-2-0021",
+    "rarity": "2",
+    "number": "0021",
+    "attr": "vo",
+    "name": "第五種接近遭遇",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0021.webp"
+  },
+  {
+    "id": "s_card-2-0022",
+    "rarity": "2",
+    "number": "0022",
+    "attr": "da",
+    "name": "今日は見学なんです",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0022.webp"
+  },
+  {
+    "id": "s_card-2-0023",
+    "rarity": "2",
+    "number": "0023",
+    "attr": "vi",
+    "name": "やさしさ、あったかい",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0023.webp"
+  },
+  {
+    "id": "s_card-2-0024",
+    "rarity": "2",
+    "number": "0024",
+    "attr": "da",
+    "name": "キュッと締めて",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0024.webp"
+  },
+  {
+    "id": "s_card-2-0025",
+    "rarity": "2",
+    "number": "0025",
+    "attr": "da",
+    "name": "ふわふわなお面？",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0025.webp"
+  },
+  {
+    "id": "s_card-2-0026",
+    "rarity": "2",
+    "number": "0026",
+    "attr": "vo",
+    "name": "ぐつぐつ、いいにおい♪",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0026.webp"
+  },
+  {
+    "id": "s_card-2-0027",
+    "rarity": "2",
+    "number": "0027",
+    "attr": "vo",
+    "name": "ブレイクタイムは珈琲で",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0027.webp"
+  },
+  {
+    "id": "s_card-2-0028",
+    "rarity": "2",
+    "number": "0028",
+    "attr": "vi",
+    "name": "りっぱなすすき！",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0028.webp"
+  },
+  {
+    "id": "s_card-2-0029",
+    "rarity": "2",
+    "number": "0029",
+    "attr": "da",
+    "name": "千奈の恩返し",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0029.webp"
+  },
+  {
+    "id": "s_card-2-0030",
+    "rarity": "2",
+    "number": "0030",
+    "attr": "vo",
+    "name": "興味深い飲み物",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0030.webp"
+  },
+  {
+    "id": "s_card-2-0031",
+    "rarity": "2",
+    "number": "0031",
+    "attr": "vi",
+    "name": "SSDのひみつ",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0031.webp"
+  },
+  {
+    "id": "s_card-2-0032",
+    "rarity": "2",
+    "number": "0032",
+    "attr": "vi",
+    "name": "サンマ、パタパタ",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0032.webp"
+  },
+  {
+    "id": "s_card-2-0033",
+    "rarity": "2",
+    "number": "0033",
+    "attr": "da",
+    "name": "バズっちゃお！",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0033.webp"
+  },
+  {
+    "id": "s_card-2-0034",
+    "rarity": "2",
+    "number": "0034",
+    "attr": "da",
+    "name": "トンボをつかまえて",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0034.webp"
+  },
+  {
+    "id": "s_card-2-0035",
+    "rarity": "2",
+    "number": "0035",
+    "attr": "da",
+    "name": "ディカプルエックスエル！",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0035.webp"
+  },
+  {
+    "id": "s_card-2-0036",
+    "rarity": "2",
+    "number": "0036",
+    "attr": "da",
+    "name": "きゅる〜んωポーズッ☆",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0036.webp"
+  },
+  {
+    "id": "s_card-2-0037",
+    "rarity": "2",
+    "number": "0037",
+    "attr": "da",
+    "name": "カロリー/2でハッピー×2",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0037.webp"
+  },
+  {
+    "id": "s_card-2-0038",
+    "rarity": "2",
+    "number": "0038",
+    "attr": "da",
+    "name": "目指すはテッペン",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0038.webp"
+  },
+  {
+    "id": "s_card-2-0039",
+    "rarity": "2",
+    "number": "0039",
+    "attr": "vi",
+    "name": "まだまだのばしてー",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0039.webp"
+  },
+  {
+    "id": "s_card-2-0040",
+    "rarity": "2",
+    "number": "0040",
+    "attr": "vo",
+    "name": "基礎＞応用",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0040.webp"
+  },
+  {
+    "id": "s_card-2-0041",
+    "rarity": "2",
+    "number": "0041",
+    "attr": "vi",
+    "name": "SSCの爆誕",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0041.webp"
+  },
+  {
+    "id": "s_card-2-0042",
+    "rarity": "2",
+    "number": "0042",
+    "attr": "vo",
+    "name": "まごころを込めて",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0042.webp"
+  },
+  {
+    "id": "s_card-2-0043",
+    "rarity": "2",
+    "number": "0043",
+    "attr": "vi",
+    "name": "佑芽ソリレース、疾走！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0043.webp"
+  },
+  {
+    "id": "s_card-2-0044",
+    "rarity": "2",
+    "number": "0044",
+    "attr": "da",
+    "name": "ピューとシューの二重奏",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0044.webp"
+  },
+  {
+    "id": "s_card-2-0045",
+    "rarity": "2",
+    "number": "0045",
+    "attr": "vi",
+    "name": "虫愛づる王子様",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0045.webp"
+  },
+  {
+    "id": "s_card-2-0046",
+    "rarity": "2",
+    "number": "0046",
+    "attr": "da",
+    "name": "ピコピコでポーン",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0046.webp"
+  },
+  {
+    "id": "s_card-2-0047",
+    "rarity": "2",
+    "number": "0047",
+    "attr": "vi",
+    "name": "奥義、三重とび！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0047.webp"
+  },
+  {
+    "id": "s_card-2-0048",
+    "rarity": "2",
+    "number": "0048",
+    "attr": "da",
+    "name": "ガールズ♡トーク",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0048.webp"
+  },
+  {
+    "id": "s_card-2-0049",
+    "rarity": "2",
+    "number": "0049",
+    "attr": "vo",
+    "name": "屈辱の2位",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0049.webp"
+  },
+  {
+    "id": "s_card-2-0050",
+    "rarity": "2",
+    "number": "0050",
+    "attr": "vo",
+    "name": "2名様、ご案内～♪",
+    "plan": "不限",
+    "image": "static/cards/s_card-2-0050.webp"
+  },
+  {
+    "id": "s_card-2-0051",
+    "rarity": "2",
+    "number": "0051",
+    "attr": "vi",
+    "name": "主菓子、甘い、薄茶、渋み",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0051.webp"
+  },
+  {
+    "id": "s_card-2-0052",
+    "rarity": "2",
+    "number": "0052",
+    "attr": "da",
+    "name": "あん・どぅ・とろわっ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0052.webp"
+  },
+  {
+    "id": "s_card-2-0053",
+    "rarity": "2",
+    "number": "0053",
+    "attr": "vi",
+    "name": "ばたんきゅー",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0053.webp"
+  },
+  {
+    "id": "s_card-2-0054",
+    "rarity": "2",
+    "number": "0054",
+    "attr": "da",
+    "name": "むず×2ふぁっしょんしょー",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0054.webp"
+  },
+  {
+    "id": "s_card-2-0055",
+    "rarity": "2",
+    "number": "0055",
+    "attr": "vo",
+    "name": "おやすみのふたり",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0055.webp"
+  },
+  {
+    "id": "s_card-2-0056",
+    "rarity": "2",
+    "number": "0056",
+    "attr": "vo",
+    "name": "スパルタ＆スパイス",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0056.webp"
+  },
+  {
+    "id": "s_card-2-0057",
+    "rarity": "2",
+    "number": "0057",
+    "attr": "vi",
+    "name": "威風堂々・お昼寝タイム",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0057.webp"
+  },
+  {
+    "id": "s_card-2-0058",
+    "rarity": "2",
+    "number": "0058",
+    "attr": "vi",
+    "name": "ちべたなひととき",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0058.webp"
+  },
+  {
+    "id": "s_card-2-0059",
+    "rarity": "2",
+    "number": "0059",
+    "attr": "vi",
+    "name": "師弟の修行",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0059.webp"
+  },
+  {
+    "id": "s_card-2-0060",
+    "rarity": "2",
+    "number": "0060",
+    "attr": "vo",
+    "name": "トゲトゲ注意報",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0060.webp"
+  },
+  {
+    "id": "s_card-2-0061",
+    "rarity": "2",
+    "number": "0061",
+    "attr": "vi",
+    "name": "腹筋で背筋で体幹キープ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0061.webp"
+  },
+  {
+    "id": "s_card-2-0062",
+    "rarity": "2",
+    "number": "0062",
+    "attr": "da",
+    "name": "はっぴぃはろうぃ～～ん！",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0062.webp"
+  },
+  {
+    "id": "s_card-2-0063",
+    "rarity": "2",
+    "number": "0063",
+    "attr": "vo",
+    "name": "あったか足ツボマッサージ",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0063.webp"
+  },
+  {
+    "id": "s_card-2-0064",
+    "rarity": "2",
+    "number": "0064",
+    "attr": "vi",
+    "name": "ごきげんような挨拶♪",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0064.webp"
+  },
+  {
+    "id": "s_card-2-0065",
+    "rarity": "2",
+    "number": "0065",
+    "attr": "vo",
+    "name": "眠れる森の王子様",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0065.webp"
+  },
+  {
+    "id": "s_card-2-0066",
+    "rarity": "2",
+    "number": "0066",
+    "attr": "vo",
+    "name": "バディ？",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0066.webp"
+  },
+  {
+    "id": "s_card-2-0067",
+    "rarity": "2",
+    "number": "0067",
+    "attr": "da",
+    "name": "おひさま笑顔、満開ふたつ",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0067.webp"
+  },
+  {
+    "id": "s_card-2-0068",
+    "rarity": "2",
+    "number": "0068",
+    "attr": "vi",
+    "name": "仲良しの証",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0068.webp"
+  },
+  {
+    "id": "s_card-2-0069",
+    "rarity": "2",
+    "number": "0069",
+    "attr": "vo",
+    "name": "一番星と王子様",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0069.webp"
+  },
+  {
+    "id": "s_card-2-0070",
+    "rarity": "2",
+    "number": "0070",
+    "attr": "da",
+    "name": "洗濯物のバランスタワー",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0070.webp"
+  },
+  {
+    "id": "s_card-2-0071",
+    "rarity": "2",
+    "number": "0071",
+    "attr": "vo",
+    "name": "お近づきの印☆",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0071.webp"
+  },
+  {
+    "id": "s_card-2-0072",
+    "rarity": "2",
+    "number": "0072",
+    "attr": "vi",
+    "name": "騎士とおてんば姫",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0072.webp"
+  },
+  {
+    "id": "s_card-2-0073",
+    "rarity": "2",
+    "number": "0073",
+    "attr": "vo",
+    "name": "ひっぱりじゅーなん",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0073.webp"
+  },
+  {
+    "id": "s_card-2-0074",
+    "rarity": "2",
+    "number": "0074",
+    "attr": "vi",
+    "name": "のんびり美味しいひととき",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0074.webp"
+  },
+  {
+    "id": "s_card-2-0075",
+    "rarity": "2",
+    "number": "0075",
+    "attr": "vo",
+    "name": "ゆずれないもの",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0075.webp"
+  },
+  {
+    "id": "s_card-2-0076",
+    "rarity": "2",
+    "number": "0076",
+    "attr": "vi",
+    "name": "ゆるるんあくび顔",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0076.webp"
+  },
+  {
+    "id": "s_card-2-0077",
+    "rarity": "2",
+    "number": "0077",
+    "attr": "da",
+    "name": "ずっしりスイカでりしゃす",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0077.webp"
+  },
+  {
+    "id": "s_card-2-0078",
+    "rarity": "2",
+    "number": "0078",
+    "attr": "vo",
+    "name": "こんにゃくなきもだめし",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0078.webp"
+  },
+  {
+    "id": "s_card-2-0079",
+    "rarity": "2",
+    "number": "0079",
+    "attr": "vi",
+    "name": "奇遇な必然",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0079.webp"
+  },
+  {
+    "id": "s_card-2-0080",
+    "rarity": "2",
+    "number": "0080",
+    "attr": "da",
+    "name": "激辛！　初星カレー！！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-2-0080.webp"
+  },
+  {
+    "id": "s_card-2-0081",
+    "rarity": "2",
+    "number": "0081",
+    "attr": "da",
+    "name": "冬のお姫様と王子様",
+    "plan": "感性",
+    "image": "static/cards/s_card-2-0081.webp"
+  },
+  {
+    "id": "s_card-2-0082",
+    "rarity": "2",
+    "number": "0082",
+    "attr": "da",
+    "name": "ふたりで衣装作り",
+    "plan": "理性",
+    "image": "static/cards/s_card-2-0082.webp"
+  },
+  {
+    "id": "s_card-3-0000",
+    "rarity": "3",
+    "number": "0000",
+    "attr": "vi",
+    "name": "あなたにも作ってあげる！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0000.webp"
+  },
+  {
+    "id": "s_card-3-0001",
+    "rarity": "3",
+    "number": "0001",
+    "attr": "vo",
+    "name": "何やってるんだろう、",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0001.webp"
+  },
+  {
+    "id": "s_card-3-0002",
+    "rarity": "3",
+    "number": "0002",
+    "attr": "vo",
+    "name": "こいつらめんどくさー",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0002.webp"
+  },
+  {
+    "id": "s_card-3-0003",
+    "rarity": "3",
+    "number": "0003",
+    "attr": "vi",
+    "name": "お姉ちゃんに任せなさい！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0003.webp"
+  },
+  {
+    "id": "s_card-3-0004",
+    "rarity": "3",
+    "number": "0004",
+    "attr": "da",
+    "name": "ぐぬぬぬぬ…………！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0004.webp"
+  },
+  {
+    "id": "s_card-3-0005",
+    "rarity": "3",
+    "number": "0005",
+    "attr": "vo",
+    "name": "次の桜の季節には。",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0005.webp"
+  },
+  {
+    "id": "s_card-3-0006",
+    "rarity": "3",
+    "number": "0006",
+    "attr": "vi",
+    "name": "お疲れ様、千奈ちゃん。",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0006.webp"
+  },
+  {
+    "id": "s_card-3-0007",
+    "rarity": "3",
+    "number": "0007",
+    "attr": "vi",
+    "name": "まるで王子様みたいな",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0007.webp"
+  },
+  {
+    "id": "s_card-3-0008",
+    "rarity": "3",
+    "number": "0008",
+    "attr": "da",
+    "name": "おいしい顔、いただき～！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0008.webp"
+  },
+  {
+    "id": "s_card-3-0009",
+    "rarity": "3",
+    "number": "0009",
+    "attr": "da",
+    "name": "わたしたち、やればできる",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0009.webp"
+  },
+  {
+    "id": "s_card-3-0010",
+    "rarity": "3",
+    "number": "0010",
+    "attr": "vo",
+    "name": "可愛いと可愛いで可愛い！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0010.webp"
+  },
+  {
+    "id": "s_card-3-0011",
+    "rarity": "3",
+    "number": "0011",
+    "attr": "vi",
+    "name": "私の目に狂いはない",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0011.webp"
+  },
+  {
+    "id": "s_card-3-0012",
+    "rarity": "3",
+    "number": "0012",
+    "attr": "vo",
+    "name": "また、あんなに無理をして",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0012.webp"
+  },
+  {
+    "id": "s_card-3-0013",
+    "rarity": "3",
+    "number": "0013",
+    "attr": "vo",
+    "name": "あら、奇遇ね",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0013.webp"
+  },
+  {
+    "id": "s_card-3-0014",
+    "rarity": "3",
+    "number": "0014",
+    "attr": "da",
+    "name": "まじか。",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0014.webp"
+  },
+  {
+    "id": "s_card-3-0015",
+    "rarity": "3",
+    "number": "0015",
+    "attr": "vi",
+    "name": "仕事のつもりで臨みなさい",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0015.webp"
+  },
+  {
+    "id": "s_card-3-0016",
+    "rarity": "3",
+    "number": "0016",
+    "attr": "vo",
+    "name": "1人たりとも欠ける事なく",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0016.webp"
+  },
+  {
+    "id": "s_card-3-0017",
+    "rarity": "3",
+    "number": "0017",
+    "attr": "da",
+    "name": "ほら、一緒に持と♪",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0017.webp"
+  },
+  {
+    "id": "s_card-3-0018",
+    "rarity": "3",
+    "number": "0018",
+    "attr": "vi",
+    "name": "第2回教室パーティー！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0018.webp"
+  },
+  {
+    "id": "s_card-3-0019",
+    "rarity": "3",
+    "number": "0019",
+    "attr": "as",
+    "name": "きみは、自慢の生徒です",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0019.webp"
+  },
+  {
+    "id": "s_card-3-0020",
+    "rarity": "3",
+    "number": "0020",
+    "attr": "as",
+    "name": "食欲の秋なんです",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0020.webp"
+  },
+  {
+    "id": "s_card-3-0021",
+    "rarity": "3",
+    "number": "0021",
+    "attr": "vi",
+    "name": "さみだれ",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0021.webp"
+  },
+  {
+    "id": "s_card-3-0022",
+    "rarity": "3",
+    "number": "0022",
+    "attr": "da",
+    "name": "晴れたね",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0022.webp"
+  },
+  {
+    "id": "s_card-3-0023",
+    "rarity": "3",
+    "number": "0023",
+    "attr": "vo",
+    "name": "まだ上がりませんように！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0023.webp"
+  },
+  {
+    "id": "s_card-3-0024",
+    "rarity": "3",
+    "number": "0024",
+    "attr": "vi",
+    "name": "「ア」じゃなくて「エ」！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0024.webp"
+  },
+  {
+    "id": "s_card-3-0025",
+    "rarity": "3",
+    "number": "0025",
+    "attr": "vi",
+    "name": "新たな挑戦の成功ですわ！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0025.webp"
+  },
+  {
+    "id": "s_card-3-0026",
+    "rarity": "3",
+    "number": "0026",
+    "attr": "da",
+    "name": "もうっ！　冷たいよ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0026.webp"
+  },
+  {
+    "id": "s_card-3-0027",
+    "rarity": "3",
+    "number": "0027",
+    "attr": "vo",
+    "name": "夏を楽しみましょう！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0027.webp"
+  },
+  {
+    "id": "s_card-3-0028",
+    "rarity": "3",
+    "number": "0028",
+    "attr": "vo",
+    "name": "一時休戦です",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0028.webp"
+  },
+  {
+    "id": "s_card-3-0029",
+    "rarity": "3",
+    "number": "0029",
+    "attr": "da",
+    "name": "夏を満喫するわよ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0029.webp"
+  },
+  {
+    "id": "s_card-3-0030",
+    "rarity": "3",
+    "number": "0030",
+    "attr": "da",
+    "name": "あっちも行きたいですわ！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0030.webp"
+  },
+  {
+    "id": "s_card-3-0031",
+    "rarity": "3",
+    "number": "0031",
+    "attr": "vi",
+    "name": "花火、やりませんか……？",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0031.webp"
+  },
+  {
+    "id": "s_card-3-0032",
+    "rarity": "3",
+    "number": "0032",
+    "attr": "da",
+    "name": "プロデュースって大変ね",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0032.webp"
+  },
+  {
+    "id": "s_card-3-0033",
+    "rarity": "3",
+    "number": "0033",
+    "attr": "vo",
+    "name": "仲直りしましょう",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0033.webp"
+  },
+  {
+    "id": "s_card-3-0034",
+    "rarity": "3",
+    "number": "0034",
+    "attr": "vo",
+    "name": "二人ならあっという間だね",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0034.webp"
+  },
+  {
+    "id": "s_card-3-0035",
+    "rarity": "3",
+    "number": "0035",
+    "attr": "vi",
+    "name": "ゆっくりと過ごしましょう",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0035.webp"
+  },
+  {
+    "id": "s_card-3-0036",
+    "rarity": "3",
+    "number": "0036",
+    "attr": "da",
+    "name": "似合うんじゃない？",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0036.webp"
+  },
+  {
+    "id": "s_card-3-0037",
+    "rarity": "3",
+    "number": "0037",
+    "attr": "vo",
+    "name": "すっかり秋色ですわね！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0037.webp"
+  },
+  {
+    "id": "s_card-3-0038",
+    "rarity": "3",
+    "number": "0038",
+    "attr": "vi",
+    "name": "会長、準備は万端です",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0038.webp"
+  },
+  {
+    "id": "s_card-3-0039",
+    "rarity": "3",
+    "number": "0039",
+    "attr": "vi",
+    "name": "ぜったい追いついてやる！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0039.webp"
+  },
+  {
+    "id": "s_card-3-0040",
+    "rarity": "3",
+    "number": "0040",
+    "attr": "da",
+    "name": "そろそろ焼けたかな？",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0040.webp"
+  },
+  {
+    "id": "s_card-3-0041",
+    "rarity": "3",
+    "number": "0041",
+    "attr": "da",
+    "name": "キラキラして綺麗～っ！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0041.webp"
+  },
+  {
+    "id": "s_card-3-0042",
+    "rarity": "3",
+    "number": "0042",
+    "attr": "vi",
+    "name": "あったかいね",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0042.webp"
+  },
+  {
+    "id": "s_card-3-0043",
+    "rarity": "3",
+    "number": "0043",
+    "attr": "da",
+    "name": "待ちなさーい！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0043.webp"
+  },
+  {
+    "id": "s_card-3-0044",
+    "rarity": "3",
+    "number": "0044",
+    "attr": "vo",
+    "name": "もう一度、最初から！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0044.webp"
+  },
+  {
+    "id": "s_card-3-0045",
+    "rarity": "3",
+    "number": "0045",
+    "attr": "vo",
+    "name": "はいっ、みんなも一緒に♪",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0045.webp"
+  },
+  {
+    "id": "s_card-3-0046",
+    "rarity": "3",
+    "number": "0046",
+    "attr": "da",
+    "name": "これが私達の、3年間",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0046.webp"
+  },
+  {
+    "id": "s_card-3-0047",
+    "rarity": "3",
+    "number": "0047",
+    "attr": "vi",
+    "name": "バレンタイン♡会議中ーっ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0047.webp"
+  },
+  {
+    "id": "s_card-3-0048",
+    "rarity": "3",
+    "number": "0048",
+    "attr": "vo",
+    "name": "絶対にお渡ししますわっ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0048.webp"
+  },
+  {
+    "id": "s_card-3-0049",
+    "rarity": "3",
+    "number": "0049",
+    "attr": "da",
+    "name": "ひとりで立てますか？",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0049.webp"
+  },
+  {
+    "id": "s_card-3-0050",
+    "rarity": "3",
+    "number": "0050",
+    "attr": "da",
+    "name": "あなたたちのことが好き",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0050.webp"
+  },
+  {
+    "id": "s_card-3-0051",
+    "rarity": "3",
+    "number": "0051",
+    "attr": "vi",
+    "name": "新生活のはじまりだね",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0051.webp"
+  },
+  {
+    "id": "s_card-3-0052",
+    "rarity": "3",
+    "number": "0052",
+    "attr": "da",
+    "name": "合格おめでとう！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0052.webp"
+  },
+  {
+    "id": "s_card-3-0053",
+    "rarity": "3",
+    "number": "0053",
+    "attr": "vo",
+    "name": "さあ、もう一戦！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0053.webp"
+  },
+  {
+    "id": "s_card-3-0054",
+    "rarity": "3",
+    "number": "0054",
+    "attr": "vi",
+    "name": "相手にとって不足なしよ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0054.webp"
+  },
+  {
+    "id": "s_card-3-0055",
+    "rarity": "3",
+    "number": "0055",
+    "attr": "da",
+    "name": "ここから始まるんだね！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0055.webp"
+  },
+  {
+    "id": "s_card-3-0056",
+    "rarity": "3",
+    "number": "0056",
+    "attr": "vo",
+    "name": "相変わらず不器用ね",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0056.webp"
+  },
+  {
+    "id": "s_card-3-0057",
+    "rarity": "3",
+    "number": "0057",
+    "attr": "da",
+    "name": "利用し合うのが友達！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0057.webp"
+  },
+  {
+    "id": "s_card-3-0058",
+    "rarity": "3",
+    "number": "0058",
+    "attr": "vi",
+    "name": "ひとりごとです",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0058.webp"
+  },
+  {
+    "id": "s_card-3-0059",
+    "rarity": "3",
+    "number": "0059",
+    "attr": "da",
+    "name": "すっかり仲良しって感じ♪",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0059.webp"
+  },
+  {
+    "id": "s_card-3-0060",
+    "rarity": "3",
+    "number": "0060",
+    "attr": "vi",
+    "name": "迷子のおしらせです",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0060.webp"
+  },
+  {
+    "id": "s_card-3-0061",
+    "rarity": "3",
+    "number": "0061",
+    "attr": "vo",
+    "name": "みんなの意見を聞かせて♪",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0061.webp"
+  },
+  {
+    "id": "s_card-3-0062",
+    "rarity": "3",
+    "number": "0062",
+    "attr": "da",
+    "name": "よくやったな、倉本。",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0062.webp"
+  },
+  {
+    "id": "s_card-3-0063",
+    "rarity": "3",
+    "number": "0063",
+    "attr": "vi",
+    "name": "推し活なひととき、だね！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0063.webp"
+  },
+  {
+    "id": "s_card-3-0064",
+    "rarity": "3",
+    "number": "0064",
+    "attr": "vi",
+    "name": "いつも頑張ってるね。",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0064.webp"
+  },
+  {
+    "id": "s_card-3-0065",
+    "rarity": "3",
+    "number": "0065",
+    "attr": "vo",
+    "name": "どんな関係なんですか？",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0065.webp"
+  },
+  {
+    "id": "s_card-3-0066",
+    "rarity": "3",
+    "number": "0066",
+    "attr": "vo",
+    "name": "放っておけない気になる子",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0066.webp"
+  },
+  {
+    "id": "s_card-3-0067",
+    "rarity": "3",
+    "number": "0067",
+    "attr": "vi",
+    "name": "わたしと美鈴、超仲良し",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0067.webp"
+  },
+  {
+    "id": "s_card-3-0068",
+    "rarity": "3",
+    "number": "0068",
+    "attr": "da",
+    "name": "お母さんか！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0068.webp"
+  },
+  {
+    "id": "s_card-3-0069",
+    "rarity": "3",
+    "number": "0069",
+    "attr": "da",
+    "name": "いつまでも続けばいいのに",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0069.webp"
+  },
+  {
+    "id": "s_card-3-0070",
+    "rarity": "3",
+    "number": "0070",
+    "attr": "da",
+    "name": "おい、来てやったぞ！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0070.webp"
+  },
+  {
+    "id": "s_card-3-0071",
+    "rarity": "3",
+    "number": "0071",
+    "attr": "da",
+    "name": "盛り上げてこー！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0071.webp"
+  },
+  {
+    "id": "s_card-3-0072",
+    "rarity": "3",
+    "number": "0072",
+    "attr": "vo",
+    "name": "おっと、危ないよ",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0072.webp"
+  },
+  {
+    "id": "s_card-3-0073",
+    "rarity": "3",
+    "number": "0073",
+    "attr": "vo",
+    "name": "ｖギャルピーーースッｖ",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0073.webp"
+  },
+  {
+    "id": "s_card-3-0074",
+    "rarity": "3",
+    "number": "0074",
+    "attr": "vi",
+    "name": "ちょっと詳しいんです！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0074.webp"
+  },
+  {
+    "id": "s_card-3-0075",
+    "rarity": "3",
+    "number": "0075",
+    "attr": "vo",
+    "name": "これは――お城ッ！！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0075.webp"
+  },
+  {
+    "id": "s_card-3-0076",
+    "rarity": "3",
+    "number": "0076",
+    "attr": "vo",
+    "name": "月村手毬、興味深いわね",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0076.webp"
+  },
+  {
+    "id": "s_card-3-0077",
+    "rarity": "3",
+    "number": "0077",
+    "attr": "vi",
+    "name": "クールダウンが大切よ！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0077.webp"
+  },
+  {
+    "id": "s_card-3-0078",
+    "rarity": "3",
+    "number": "0078",
+    "attr": "vo",
+    "name": "レディ・セット、ゴー！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0078.webp"
+  },
+  {
+    "id": "s_card-3-0079",
+    "rarity": "3",
+    "number": "0079",
+    "attr": "da",
+    "name": "やっと見つけたぞ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0079.webp"
+  },
+  {
+    "id": "s_card-3-0080",
+    "rarity": "3",
+    "number": "0080",
+    "attr": "vo",
+    "name": "ぜったいに取るんだ！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0080.webp"
+  },
+  {
+    "id": "s_card-3-0081",
+    "rarity": "3",
+    "number": "0081",
+    "attr": "da",
+    "name": "メリクリ、おねーちゃん♪",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0081.webp"
+  },
+  {
+    "id": "s_card-3-0082",
+    "rarity": "3",
+    "number": "0082",
+    "attr": "da",
+    "name": "なぜこんなところにッ！？",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0082.webp"
+  },
+  {
+    "id": "s_card-3-0083",
+    "rarity": "3",
+    "number": "0083",
+    "attr": "vo",
+    "name": "堂々とサボってる！？",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0083.webp"
+  },
+  {
+    "id": "s_card-3-0084",
+    "rarity": "3",
+    "number": "0084",
+    "attr": "vo",
+    "name": "手毬のリサイタル、だね",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0084.webp"
+  },
+  {
+    "id": "s_card-3-0085",
+    "rarity": "3",
+    "number": "0085",
+    "attr": "da",
+    "name": "自分と向き合う時間だ",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0085.webp"
+  },
+  {
+    "id": "s_card-3-0086",
+    "rarity": "3",
+    "number": "0086",
+    "attr": "vi",
+    "name": "貸せ、手本を見せてやる！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0086.webp"
+  },
+  {
+    "id": "s_card-3-0087",
+    "rarity": "3",
+    "number": "0087",
+    "attr": "vi",
+    "name": "オシャレもメイクも♪",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0087.webp"
+  },
+  {
+    "id": "s_card-3-0088",
+    "rarity": "3",
+    "number": "0088",
+    "attr": "vo",
+    "name": "思い出の宝箱だ、ね",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0088.webp"
+  },
+  {
+    "id": "s_card-3-0089",
+    "rarity": "3",
+    "number": "0089",
+    "attr": "vi",
+    "name": "かかってらっしゃい！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0089.webp"
+  },
+  {
+    "id": "s_card-3-0090",
+    "rarity": "3",
+    "number": "0090",
+    "attr": "vo",
+    "name": "みいつけた。",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0090.webp"
+  },
+  {
+    "id": "s_card-3-0091",
+    "rarity": "3",
+    "number": "0091",
+    "attr": "vi",
+    "name": "あたしの勝ち、ですね～！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0091.webp"
+  },
+  {
+    "id": "s_card-3-0092",
+    "rarity": "3",
+    "number": "0092",
+    "attr": "vi",
+    "name": "進化したお弁当、気になる",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0092.webp"
+  },
+  {
+    "id": "s_card-3-0093",
+    "rarity": "3",
+    "number": "0093",
+    "attr": "vi",
+    "name": "長旅おつかれさま！",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0093.webp"
+  },
+  {
+    "id": "s_card-3-0094",
+    "rarity": "3",
+    "number": "0094",
+    "attr": "da",
+    "name": "上かッ！！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0094.webp"
+  },
+  {
+    "id": "s_card-3-0095",
+    "rarity": "3",
+    "number": "0095",
+    "attr": "da",
+    "name": "パーティー楽しみだねっ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0095.webp"
+  },
+  {
+    "id": "s_card-3-0096",
+    "rarity": "3",
+    "number": "0096",
+    "attr": "vo",
+    "name": "あなたとふたり、電車で",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0096.webp"
+  },
+  {
+    "id": "s_card-3-0097",
+    "rarity": "3",
+    "number": "0097",
+    "attr": "vi",
+    "name": "……騒々しいお祭りね",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0097.webp"
+  },
+  {
+    "id": "s_card-3-0098",
+    "rarity": "3",
+    "number": "0098",
+    "attr": "vo",
+    "name": "大運動会、開催っ！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0098.webp"
+  },
+  {
+    "id": "s_card-3-0099",
+    "rarity": "3",
+    "number": "0099",
+    "attr": "vi",
+    "name": "もうすぐ本番ですね",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0099.webp"
+  },
+  {
+    "id": "s_card-3-0100",
+    "rarity": "3",
+    "number": "0100",
+    "attr": "as",
+    "name": "私たちも成長していくぞ！",
+    "plan": "不限",
+    "image": "static/cards/s_card-3-0100.webp"
+  },
+  {
+    "id": "s_card-3-0101",
+    "rarity": "3",
+    "number": "0101",
+    "attr": "vi",
+    "name": "どーなっちゃうの～？",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0101.webp"
+  },
+  {
+    "id": "s_card-3-0102",
+    "rarity": "3",
+    "number": "0102",
+    "attr": "vi",
+    "name": "おでん、通りま～すッ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0102.webp"
+  },
+  {
+    "id": "s_card-3-0103",
+    "rarity": "3",
+    "number": "0103",
+    "attr": "vo",
+    "name": "次の曲は～ッあの曲だ！！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0103.webp"
+  },
+  {
+    "id": "s_card-3-0104",
+    "rarity": "3",
+    "number": "0104",
+    "attr": "vi",
+    "name": "インタビューお願いします",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0104.webp"
+  },
+  {
+    "id": "s_card-3-0105",
+    "rarity": "3",
+    "number": "0105",
+    "attr": "da",
+    "name": "私を楽しませろ",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0105.webp"
+  },
+  {
+    "id": "s_card-3-0106",
+    "rarity": "3",
+    "number": "0106",
+    "attr": "vo",
+    "name": "食レポ、得意かも！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0106.webp"
+  },
+  {
+    "id": "s_card-3-0107",
+    "rarity": "3",
+    "number": "0107",
+    "attr": "vo",
+    "name": "大切な思い出、またひとつ",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0107.webp"
+  },
+  {
+    "id": "s_card-3-0108",
+    "rarity": "3",
+    "number": "0108",
+    "attr": "vo",
+    "name": "風紀が乱れるぞ！",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0108.webp"
+  },
+  {
+    "id": "s_card-3-0109",
+    "rarity": "3",
+    "number": "0109",
+    "attr": "vo",
+    "name": "わたしに、まかせて",
+    "plan": "非凡",
+    "image": "static/cards/s_card-3-0109.webp"
+  },
+  {
+    "id": "s_card-3-0110",
+    "rarity": "3",
+    "number": "0110",
+    "attr": "vi",
+    "name": "イクラ～♪　ウニ～♪",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0110.webp"
+  },
+  {
+    "id": "s_card-3-0111",
+    "rarity": "3",
+    "number": "0111",
+    "attr": "vi",
+    "name": "小悪魔になっちゃえ♪",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0111.webp"
+  },
+  {
+    "id": "s_card-3-0112",
+    "rarity": "3",
+    "number": "0112",
+    "attr": "vi",
+    "name": "これがあのかぼちゃ……",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0112.webp"
+  },
+  {
+    "id": "s_card-3-0113",
+    "rarity": "3",
+    "number": "0113",
+    "attr": "vo",
+    "name": "デ、デートのお誘い！？",
+    "plan": "感性",
+    "image": "static/cards/s_card-3-0113.webp"
+  },
+  {
+    "id": "s_card-3-0114",
+    "rarity": "3",
+    "number": "0114",
+    "attr": "vo",
+    "name": "みんなも読んでみてっ！",
+    "plan": "理性",
+    "image": "static/cards/s_card-3-0114.webp"
+  }
+]
