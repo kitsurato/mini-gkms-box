@@ -6,6 +6,7 @@
     <title>学园偶像大师 BOX分享工具</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./bind-api.js"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
         
@@ -154,7 +155,7 @@
                     </div>
                     <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
                         class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
-                        {{ shortBusy ? '…' : '生成短码' }}
+                        {{ shortBusy ? '…' : (lastShortCode || '生成短码') }}
                     </button>
                 </div>
             </div>
@@ -171,7 +172,7 @@
                     </div>
                     <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
                         class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
-                        {{ shortBusy ? '…' : '生成短码' }}
+                        {{ shortBusy ? '…' : (lastShortCode || '生成短码') }}
                     </button>
                 </div>
             </div>
@@ -357,6 +358,8 @@
                     isGenerating: false, selectedAttrs: [], selectedRarities: [],
                     selectedCidolCharacter: 'all', cidolVariant: '1', loadError: '',
                     shortBusy: false,
+                    lastShortCode: '',
+                    bindApi: (typeof window !== 'undefined' && window.GAKUEN_BIND_API) ? window.GAKUEN_BIND_API : null,
                     bindRepo: 'kitsurato/mini-gkms-box', bindBranch: 'main', bindDir: 'binds'
                 } 
             },
@@ -625,9 +628,7 @@
                     const text = (raw || '').trim();
                     if (!text) return null;
                     if (/^g\d{8}$/i.test(text)) {
-                        const res = await fetch(this.rawBindUrl(text.toLowerCase()) + `?t=${Date.now()}`, { cache: 'no-store' });
-                        if (!res.ok) throw new Error(String(res.status));
-                        return await res.json();
+                        return await this.fetchShortBind(text.toLowerCase());
                     }
                     return { box: text, cidol: text, _plain: true };
                 },
@@ -835,24 +836,25 @@
                     el.select(); document.execCommand('copy');
                     document.body.removeChild(el); alert("已复制角色皮肤代码");
                 },
-                getGithubToken() {
-                    return (localStorage.getItem('gakuen_bind_github_token') || '').trim();
-                },
-                ensureGithubToken() {
-                    let token = this.getGithubToken();
-                    if (token) return token;
-                    const next = prompt('GitHub Token');
-                    if (!next || !next.trim()) return '';
-                    token = next.trim();
-                    localStorage.setItem('gakuen_bind_github_token', token);
-                    return token;
-                },
                 allocShortCode() {
                     const n = Math.floor(Math.random() * 100000000);
                     return 'g' + String(n).padStart(8, '0');
                 },
                 rawBindUrl(code) {
                     return `https://raw.githubusercontent.com/${this.bindRepo}/${this.bindBranch}/${this.bindDir}/${code}.json`;
+                },
+                bindRestUrl() {
+                    const api = this.bindApi;
+                    if (!api || !api.supabaseUrl || !api.supabaseAnonKey || !api.table) return '';
+                    return `${api.supabaseUrl.replace(/\/$/, '')}/rest/v1/${api.table}`;
+                },
+                bindHeaders(extra = {}) {
+                    const api = this.bindApi;
+                    return {
+                        apikey: api.supabaseAnonKey,
+                        Authorization: `Bearer ${api.supabaseAnonKey}`,
+                        ...extra
+                    };
                 },
                 copyText(text) {
                     const el = document.createElement('textarea');
@@ -862,64 +864,82 @@
                     document.execCommand('copy');
                     document.body.removeChild(el);
                 },
-                async githubPutBind(record, token) {
-                    const path = `${this.bindDir}/${record.code}.json`;
-                    const apiBase = `https://api.github.com/repos/${this.bindRepo}/contents/${path}`;
-                    let sha = null;
-                    const getRes = await fetch(`${apiBase}?ref=${this.bindBranch}`, {
-                        headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}` }
-                    });
-                    if (getRes.status === 200) {
-                        const info = await getRes.json();
-                        sha = info.sha;
-                    } else if (getRes.status !== 404) {
-                        throw new Error(String(getRes.status));
+                async fetchShortBind(code) {
+                    const rest = this.bindRestUrl();
+                    if (rest) {
+                        const res = await fetch(`${rest}?code=eq.${encodeURIComponent(code)}&select=code,box,cidol,box_count,cidol_count,label&limit=1`, {
+                            headers: this.bindHeaders({ Accept: 'application/json' }),
+                            cache: 'no-store'
+                        });
+                        if (res.ok) {
+                            const rows = await res.json();
+                            if (Array.isArray(rows) && rows.length) return rows[0];
+                        }
                     }
-                    const body = {
-                        message: `bind: upsert ${record.code}`,
-                        content: btoa(unescape(encodeURIComponent(JSON.stringify(record, null, 2)))),
-                        branch: this.bindBranch
-                    };
-                    if (sha) body.sha = sha;
-                    const putRes = await fetch(apiBase, {
-                        method: 'PUT',
-                        headers: {
-                            Accept: 'application/vnd.github+json',
-                            Authorization: `Bearer ${token}`,
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(body)
+                    const gh = await fetch(this.rawBindUrl(code) + `?t=${Date.now()}`, { cache: 'no-store' });
+                    if (!gh.ok) throw new Error(String(gh.status));
+                    return await gh.json();
+                },
+                async insertShortBind(record) {
+                    const rest = this.bindRestUrl();
+                    if (!rest) throw new Error('bind api missing');
+                    const res = await fetch(rest, {
+                        method: 'POST',
+                        headers: this.bindHeaders({
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json',
+                            Prefer: 'return=minimal'
+                        }),
+                        body: JSON.stringify({
+                            code: record.code,
+                            box: record.box || '',
+                            cidol: record.cidol || '',
+                            box_count: record.box_count || 0,
+                            cidol_count: record.cidol_count || 0,
+                            label: record.label || ''
+                        })
                     });
-                    if (!putRes.ok) throw new Error(String(putRes.status));
-                    return putRes.json();
+                    if (res.status === 409) return false;
+                    if (!res.ok) {
+                        let detail = String(res.status);
+                        try {
+                            const body = await res.json();
+                            if (body && (body.message || body.error)) detail = body.message || body.error;
+                        } catch (e) {}
+                        throw new Error(detail);
+                    }
+                    return true;
                 },
                 async publishShortCode() {
                     if (!this.exportString && !this.cidolExportString) return;
-                    const token = this.ensureGithubToken();
-                    if (!token) return;
+                    if (!this.bindRestUrl()) return;
                     this.shortBusy = true;
                     try {
-                        let code = this.allocShortCode();
-                        for (let i = 0; i < 8; i++) {
-                            const probe = await fetch(this.rawBindUrl(code), { cache: 'no-store' });
-                            if (probe.status === 404) break;
+                        let code = '';
+                        for (let i = 0; i < 12; i++) {
                             code = this.allocShortCode();
+                            const ok = await this.insertShortBind({
+                                code,
+                                box: this.exportString || '',
+                                cidol: this.cidolExportString || '',
+                                box_count: this.ownedCount,
+                                cidol_count: this.cidolOwnedCount,
+                                label: ''
+                            });
+                            if (ok) break;
+                            code = '';
                         }
-                        const record = {
-                            v: 1,
-                            code,
-                            box: this.exportString || '',
-                            cidol: this.cidolExportString || '',
-                            label: '',
-                            box_count: this.ownedCount,
-                            cidol_count: this.cidolOwnedCount,
-                            created_at: new Date().toISOString(),
-                            updated_at: new Date().toISOString(),
-                            repo: this.bindRepo,
-                            raw_url: this.rawBindUrl(code)
-                        };
-                        await this.githubPutBind(record, token);
-                        this.copyText(code);
+                        if (!code) throw new Error('short code alloc failed');
+                        this.lastShortCode = code;
+                        try {
+                            if (navigator.clipboard && navigator.clipboard.writeText) {
+                                await navigator.clipboard.writeText(code);
+                            } else {
+                                this.copyText(code);
+                            }
+                        } catch (e) {
+                            this.copyText(code);
+                        }
                     } catch (e) {
                         alert(e && e.message ? e.message : String(e));
                     } finally {
