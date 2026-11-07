@@ -170,6 +170,33 @@
             <button @click="activeMenu = 'cidol'" :class="['nav-btn flex-1 sm:flex-none', activeMenu === 'cidol' ? 'nav-btn-active' : '']">角色与皮肤</button>
         </nav>
 
+        <section class="mb-6 bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-3">
+                <div>
+                    <div class="text-sm font-black text-white">短码绑定（GitHub 互通）</div>
+                    <div class="text-[11px] text-slate-400 mt-1">生成 <code class="text-cyan-300">g</code>+8位数字，上传到本仓库 <code class="text-cyan-300">binds/</code>。群里发 <code class="text-cyan-300">/绑定 g########</code>，bot 直接查 GitHub。</div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
+                        class="nav-btn !min-h-[38px] !px-4 !text-[12px] bg-cyan-700/40 text-cyan-100 border-cyan-500/30 hover:bg-cyan-600/50 disabled:opacity-40">
+                        {{ shortBusy ? '上传中…' : '生成并上传短码' }}
+                    </button>
+                    <button @click="copyShortCode" :disabled="!shortCode" class="nav-btn !min-h-[38px] !px-4 !text-[12px] disabled:opacity-40">复制短码</button>
+                    <button @click="promptGithubToken" class="nav-btn !min-h-[38px] !px-4 !text-[12px]">设置 Token</button>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+                <input v-model="shortLookup" maxlength="9" placeholder="查询已有短码 g48291037"
+                    class="filter-select !h-10 flex-1 font-mono text-[12px]" />
+                <button @click="lookupShortCode" class="nav-btn !min-h-[38px] !px-4 !text-[12px]">查询</button>
+            </div>
+            <div v-if="shortCode" class="mt-3 text-[12px] text-slate-200">
+                当前短码：<span class="font-mono text-cyan-300 text-base font-black tracking-wider">{{ shortCode }}</span>
+                <span class="text-slate-500 ml-2">群指令 /绑定 {{ shortCode }}</span>
+            </div>
+            <div v-if="shortStatus" class="mt-2 text-[11px]" :class="shortError ? 'text-red-400' : 'text-emerald-400'">{{ shortStatus }}</div>
+        </section>
+
         <section class="stat-panel mb-6">
             <div class="grid grid-cols-1 xl:grid-cols-[220px_1fr] gap-3">
                 <div class="stat-chip">
@@ -343,7 +370,9 @@
                     cards: [], cidolSkins: [], cidolCardNames: {}, characterNames: {},
                     catalogMeta: null, showModal: false, generatedImageSrc: null,
                     isGenerating: false, selectedAttrs: [], selectedRarities: [],
-                    selectedCidolCharacter: 'all', cidolVariant: '1', loadError: ''
+                    selectedCidolCharacter: 'all', cidolVariant: '1', loadError: '',
+                    shortCode: '', shortLookup: '', shortStatus: '', shortError: false, shortBusy: false,
+                    bindRepo: 'kitsurato/mini-gkms-box', bindBranch: 'main', bindDir: 'binds'
                 } 
             },
             computed: {
@@ -785,6 +814,145 @@
                     el.value = this.cidolExportString; document.body.appendChild(el);
                     el.select(); document.execCommand('copy');
                     document.body.removeChild(el); alert("已复制角色皮肤代码");
+                },
+                getGithubToken() {
+                    return (localStorage.getItem('gakuen_bind_github_token') || '').trim();
+                },
+                promptGithubToken() {
+                    const cur = this.getGithubToken();
+                    const next = prompt(
+                        '粘贴 GitHub Token（需 contents:write，仅保存在本机浏览器）。\n留空则清除。\n公有仓库查询短码不需要 Token。',
+                        cur
+                    );
+                    if (next === null) return;
+                    if (!next.trim()) localStorage.removeItem('gakuen_bind_github_token');
+                    else localStorage.setItem('gakuen_bind_github_token', next.trim());
+                    this.shortStatus = next.trim() ? 'Token 已保存到本机浏览器' : 'Token 已清除';
+                    this.shortError = false;
+                },
+                allocShortCode() {
+                    const n = Math.floor(Math.random() * 100000000);
+                    return 'g' + String(n).padStart(8, '0');
+                },
+                rawBindUrl(code) {
+                    return `https://raw.githubusercontent.com/${this.bindRepo}/${this.bindBranch}/${this.bindDir}/${code}.json`;
+                },
+                async githubPutBind(record, token) {
+                    const path = `${this.bindDir}/${record.code}.json`;
+                    const apiBase = `https://api.github.com/repos/${this.bindRepo}/contents/${path}`;
+                    let sha = null;
+                    const getRes = await fetch(`${apiBase}?ref=${this.bindBranch}`, {
+                        headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}` }
+                    });
+                    if (getRes.status === 200) {
+                        const info = await getRes.json();
+                        sha = info.sha;
+                    } else if (getRes.status !== 404) {
+                        const t = await getRes.text();
+                        throw new Error(`读取 GitHub 失败：${getRes.status} ${t}`);
+                    }
+                    const body = {
+                        message: `bind: upsert ${record.code}`,
+                        content: btoa(unescape(encodeURIComponent(JSON.stringify(record, null, 2)))),
+                        branch: this.bindBranch
+                    };
+                    if (sha) body.sha = sha;
+                    const putRes = await fetch(apiBase, {
+                        method: 'PUT',
+                        headers: {
+                            Accept: 'application/vnd.github+json',
+                            Authorization: `Bearer ${token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+                    });
+                    if (!putRes.ok) {
+                        const t = await putRes.text();
+                        throw new Error(`上传失败：${putRes.status} ${t}`);
+                    }
+                    return putRes.json();
+                },
+                async publishShortCode() {
+                    if (!this.exportString && !this.cidolExportString) {
+                        alert('请先选择支援卡或角色皮肤');
+                        return;
+                    }
+                    const token = this.getGithubToken();
+                    if (!token) {
+                        this.promptGithubToken();
+                        if (!this.getGithubToken()) {
+                            this.shortStatus = '未设置 Token，无法上传到 GitHub';
+                            this.shortError = true;
+                            return;
+                        }
+                    }
+                    this.shortBusy = true;
+                    this.shortError = false;
+                    this.shortStatus = '正在上传…';
+                    try {
+                        let code = this.allocShortCode();
+                        for (let i = 0; i < 8; i++) {
+                            const probe = await fetch(this.rawBindUrl(code), { cache: 'no-store' });
+                            if (probe.status === 404) break;
+                            code = this.allocShortCode();
+                        }
+                        const record = {
+                            v: 1,
+                            code,
+                            box: this.exportString || '',
+                            cidol: this.cidolExportString || '',
+                            label: '',
+                            box_count: this.ownedCount,
+                            cidol_count: this.cidolOwnedCount,
+                            created_at: new Date().toISOString(),
+                            updated_at: new Date().toISOString(),
+                            repo: this.bindRepo,
+                            raw_url: this.rawBindUrl(code)
+                        };
+                        await this.githubPutBind(record, this.getGithubToken());
+                        this.shortCode = code;
+                        this.shortStatus = `已上传 GitHub：${this.rawBindUrl(code)}`;
+                        this.shortError = false;
+                    } catch (e) {
+                        this.shortStatus = e && e.message ? e.message : String(e);
+                        this.shortError = true;
+                    } finally {
+                        this.shortBusy = false;
+                    }
+                },
+                copyShortCode() {
+                    if (!this.shortCode) return;
+                    const el = document.createElement('textarea');
+                    el.value = this.shortCode;
+                    document.body.appendChild(el);
+                    el.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(el);
+                    this.shortStatus = `已复制 ${this.shortCode}`;
+                    this.shortError = false;
+                },
+                async lookupShortCode() {
+                    const code = (this.shortLookup || '').trim().toLowerCase();
+                    if (!/^g\d{8}$/.test(code)) {
+                        this.shortStatus = '短码格式应为 g + 8 位数字';
+                        this.shortError = true;
+                        return;
+                    }
+                    this.shortBusy = true;
+                    this.shortError = false;
+                    this.shortStatus = '查询中…';
+                    try {
+                        const res = await fetch(this.rawBindUrl(code) + `?t=${Date.now()}`, { cache: 'no-store' });
+                        if (!res.ok) throw new Error(res.status === 404 ? 'GitHub 上没有这个短码' : `查询失败 ${res.status}`);
+                        const data = await res.json();
+                        this.shortCode = data.code || code;
+                        this.shortStatus = `查到：支援卡 ${data.box_count || 0} / 角色 ${data.cidol_count || 0}`;
+                    } catch (e) {
+                        this.shortStatus = e && e.message ? e.message : String(e);
+                        this.shortError = true;
+                    } finally {
+                        this.shortBusy = false;
+                    }
                 }
             },
             async mounted() { await this.initCatalogs(); }
