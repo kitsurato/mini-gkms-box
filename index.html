@@ -154,8 +154,8 @@
                         <div class="font-mono text-[10px] text-indigo-400 truncate">{{ exportString || 'Waiting...' }}</div>
                     </div>
                     <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
-                        class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
-                        {{ shortBusy ? '…' : (lastShortCode || '生成短码') }}
+                        :class="shortButtonClass">
+                        {{ shortButtonLabel }}
                     </button>
                 </div>
             </div>
@@ -171,8 +171,8 @@
                         <div class="font-mono text-[10px] text-indigo-400 truncate">{{ cidolExportString || 'Waiting...' }}</div>
                     </div>
                     <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
-                        class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
-                        {{ shortBusy ? '…' : (lastShortCode || '生成短码') }}
+                        :class="shortButtonClass">
+                        {{ shortButtonLabel }}
                     </button>
                 </div>
             </div>
@@ -358,12 +358,29 @@
                     isGenerating: false, selectedAttrs: [], selectedRarities: [],
                     selectedCidolCharacter: 'all', cidolVariant: '1', loadError: '',
                     shortBusy: false,
+                    shortCopied: false,
                     lastShortCode: '',
+                    _shortCopiedTimer: null,
                     bindApi: (typeof window !== 'undefined' && window.GAKUEN_BIND_API) ? window.GAKUEN_BIND_API : null,
                     bindRepo: 'kitsurato/mini-gkms-box', bindBranch: 'main', bindDir: 'binds'
                 } 
             },
             computed: {
+                shortButtonLabel() {
+                    if (this.shortBusy) return '生成中…';
+                    if (this.shortCopied && this.lastShortCode) return `已复制 ${this.lastShortCode}`;
+                    return '生成短码';
+                },
+                shortButtonClass() {
+                    const base = 'w-full h-10 rounded-xl text-[13px] font-black tracking-wide transition disabled:opacity-40 disabled:cursor-not-allowed shadow-lg';
+                    if (this.shortBusy) {
+                        return `${base} text-white bg-amber-500 border border-amber-300 shadow-amber-500/30`;
+                    }
+                    if (this.shortCopied) {
+                        return `${base} text-white bg-emerald-500 hover:bg-emerald-400 border border-emerald-300 shadow-emerald-500/35`;
+                    }
+                    return `${base} text-slate-950 bg-amber-400 hover:bg-amber-300 border border-amber-200 shadow-amber-400/40`;
+                },
                 ownedCount() { return this.cards.filter(c => c.breakLevel >= 0).length; },
                 cidolOwnedCount() { return this.cidolSkins.filter(s => s.owned).length; },
                 activeStats() {
@@ -910,10 +927,20 @@
                     }
                     return true;
                 },
+                markShortCopied(code) {
+                    this.lastShortCode = code;
+                    this.shortCopied = true;
+                    if (this._shortCopiedTimer) clearTimeout(this._shortCopiedTimer);
+                    this._shortCopiedTimer = setTimeout(() => {
+                        this.shortCopied = false;
+                        this._shortCopiedTimer = null;
+                    }, 2600);
+                },
                 async publishShortCode() {
                     if (!this.exportString && !this.cidolExportString) return;
                     if (!this.bindRestUrl()) return;
                     this.shortBusy = true;
+                    this.shortCopied = false;
                     try {
                         let code = '';
                         for (let i = 0; i < 12; i++) {
@@ -930,7 +957,6 @@
                             code = '';
                         }
                         if (!code) throw new Error('short code alloc failed');
-                        this.lastShortCode = code;
                         try {
                             if (navigator.clipboard && navigator.clipboard.writeText) {
                                 await navigator.clipboard.writeText(code);
@@ -940,6 +966,7 @@
                         } catch (e) {
                             this.copyText(code);
                         }
+                        this.markShortCopied(code);
                     } catch (e) {
                         alert(e && e.message ? e.message : String(e));
                     } finally {
