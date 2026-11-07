@@ -147,9 +147,15 @@
                     <span v-if="isGenerating" class="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></span>
                     <span>{{ isGenerating ? '正在绘图...' : '生成汇总长图' }}</span>
                 </button>
-                <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer w-full lg:max-w-md group relative text-right">
-                    <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">BOX代码 (点击复制)</div>
-                    <div class="font-mono text-[10px] text-indigo-400 truncate">{{ exportString || 'Waiting...' }}</div>
+                <div class="w-full lg:max-w-md flex flex-col gap-2">
+                    <div @click="copyResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer group relative text-right">
+                        <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">BOX代码 (点击复制)</div>
+                        <div class="font-mono text-[10px] text-indigo-400 truncate">{{ exportString || 'Waiting...' }}</div>
+                    </div>
+                    <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
+                        class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
+                        {{ shortBusy ? '…' : '生成短码' }}
+                    </button>
                 </div>
             </div>
             <div v-if="activeMenu === 'cidol'" class="flex flex-col items-end gap-3 w-full lg:w-auto">
@@ -158,9 +164,15 @@
                     <span v-if="isGenerating" class="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></span>
                     <span>{{ isGenerating ? '正在绘图...' : '生成汇总长图' }}</span>
                 </button>
-                <div @click="copyCidolResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer w-full lg:max-w-md group relative text-right">
-                    <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">角色皮肤代码 (点击复制)</div>
-                    <div class="font-mono text-[10px] text-indigo-400 truncate">{{ cidolExportString || 'Waiting...' }}</div>
+                <div class="w-full lg:max-w-md flex flex-col gap-2">
+                    <div @click="copyCidolResult" class="bg-slate-900 border border-slate-800 rounded-2xl p-3 cursor-pointer group relative text-right">
+                        <div class="text-[8px] text-slate-500 mb-1 uppercase tracking-widest font-bold">角色皮肤代码 (点击复制)</div>
+                        <div class="font-mono text-[10px] text-indigo-400 truncate">{{ cidolExportString || 'Waiting...' }}</div>
+                    </div>
+                    <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
+                        class="w-full h-9 rounded-xl text-[12px] font-black bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 disabled:opacity-40 transition">
+                        {{ shortBusy ? '…' : '生成短码' }}
+                    </button>
                 </div>
             </div>
         </header>
@@ -169,33 +181,6 @@
             <button @click="activeMenu = 'support'" :class="['nav-btn flex-1 sm:flex-none', activeMenu === 'support' ? 'nav-btn-active' : '']">支援卡</button>
             <button @click="activeMenu = 'cidol'" :class="['nav-btn flex-1 sm:flex-none', activeMenu === 'cidol' ? 'nav-btn-active' : '']">角色与皮肤</button>
         </nav>
-
-        <section class="mb-6 bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 mb-3">
-                <div>
-                    <div class="text-sm font-black text-white">短码绑定（GitHub 互通）</div>
-                    <div class="text-[11px] text-slate-400 mt-1">生成 <code class="text-cyan-300">g</code>+8位数字，上传到本仓库 <code class="text-cyan-300">binds/</code>。群里发 <code class="text-cyan-300">/绑定 g########</code>，bot 直接查 GitHub。</div>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <button @click="publishShortCode" :disabled="shortBusy || (!exportString && !cidolExportString)"
-                        class="nav-btn !min-h-[38px] !px-4 !text-[12px] bg-cyan-700/40 text-cyan-100 border-cyan-500/30 hover:bg-cyan-600/50 disabled:opacity-40">
-                        {{ shortBusy ? '上传中…' : '生成并上传短码' }}
-                    </button>
-                    <button @click="copyShortCode" :disabled="!shortCode" class="nav-btn !min-h-[38px] !px-4 !text-[12px] disabled:opacity-40">复制短码</button>
-                    <button @click="promptGithubToken" class="nav-btn !min-h-[38px] !px-4 !text-[12px]">设置 Token</button>
-                </div>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
-                <input v-model="shortLookup" maxlength="9" placeholder="查询已有短码 g48291037"
-                    class="filter-select !h-10 flex-1 font-mono text-[12px]" />
-                <button @click="lookupShortCode" class="nav-btn !min-h-[38px] !px-4 !text-[12px]">查询</button>
-            </div>
-            <div v-if="shortCode" class="mt-3 text-[12px] text-slate-200">
-                当前短码：<span class="font-mono text-cyan-300 text-base font-black tracking-wider">{{ shortCode }}</span>
-                <span class="text-slate-500 ml-2">群指令 /绑定 {{ shortCode }}</span>
-            </div>
-            <div v-if="shortStatus" class="mt-2 text-[11px]" :class="shortError ? 'text-red-400' : 'text-emerald-400'">{{ shortStatus }}</div>
-        </section>
 
         <section class="stat-panel mb-6">
             <div class="grid grid-cols-1 xl:grid-cols-[220px_1fr] gap-3">
@@ -371,7 +356,7 @@
                     catalogMeta: null, showModal: false, generatedImageSrc: null,
                     isGenerating: false, selectedAttrs: [], selectedRarities: [],
                     selectedCidolCharacter: 'all', cidolVariant: '1', loadError: '',
-                    shortCode: '', shortLookup: '', shortStatus: '', shortError: false, shortBusy: false,
+                    shortBusy: false,
                     bindRepo: 'kitsurato/mini-gkms-box', bindBranch: 'main', bindDir: 'binds'
                 } 
             },
@@ -595,46 +580,87 @@
                 },
                 clearAllFilters() { this.selectedAttrs = []; this.selectedRarities = []; },
                 
-                // Base64 解码
-                importCode() {
-                    const input = prompt("请粘贴导出的代码字符串：");
-                    if (!input || input.trim() === "") return;
-                    
-                    let code = "";
-                    try {
-                        // 尝试 Base64 解码
-                        code = atob(input.trim());
-                    } catch (e) {
-                        alert("请检查代码：无效的格式");
-                        return;
-                    }
-                    
+                applyBoxRaw(code) {
                     const items = code.split(',');
                     const updates = [];
-
                     for (const item of items) {
                         const parts = item.split('-');
-                        if (parts.length !== 3) { alert("请检查代码：格式不正确"); return; }
-
+                        if (parts.length !== 3) { alert("请检查代码：格式不正确"); return false; }
                         const [rarity, id, lv] = parts;
                         const paddedId = id.padStart(4, '0');
                         const rInt = parseInt(rarity);
                         const lvInt = parseInt(lv);
-
-                        if (rInt < 2 || rInt > 3) { alert("请检查代码：稀有度数值无效"); return; }
-                        if (lvInt < 0 || lvInt > 4) { alert("请检查代码：等级数值无效"); return; }
-
+                        if (rInt < 2 || rInt > 3) { alert("请检查代码：稀有度数值无效"); return false; }
+                        if (lvInt < 0 || lvInt > 4) { alert("请检查代码：等级数值无效"); return false; }
                         const target = this.cards.find(c => c.id === paddedId && c.rarity === String(rarity));
-                        if (!target) { alert(`请检查代码：卡片编号 ${paddedId} 在该稀有度下不存在`); return; }
-
+                        if (!target) { alert(`请检查代码：卡片编号 ${paddedId} 在该稀有度下不存在`); return false; }
                         updates.push({ card: target, level: lvInt });
                     }
-
                     this.cards.forEach(c => c.breakLevel = -1);
                     updates.forEach(u => u.card.breakLevel = u.level);
-                    
                     this.saveToLocal();
-                    alert("数据继承成功！");
+                    return true;
+                },
+                applyCidolRaw(code) {
+                    const items = code.split(',').map(item => item.trim()).filter(Boolean);
+                    const updates = [];
+                    for (const item of items) {
+                        const parts = item.split('-');
+                        if (parts.length !== 3) { alert("请检查代码：格式不正确"); return false; }
+                        const [character, rarity, id] = parts;
+                        const paddedId = String(id).padStart(3, '0');
+                        const target = this.cidolSkins.find(s => s.character === character && s.rarity === String(rarity) && s.id === paddedId);
+                        if (!target) {
+                            alert(`请检查代码：角色皮肤 ${character}-${rarity}-${paddedId} 不存在`);
+                            return false;
+                        }
+                        updates.push(target);
+                    }
+                    this.cidolSkins.forEach(s => { s.owned = false; });
+                    updates.forEach(s => { s.owned = true; });
+                    this.saveCidolToLocal();
+                    return true;
+                },
+                async resolveImportPayload(raw) {
+                    const text = (raw || '').trim();
+                    if (!text) return null;
+                    if (/^g\d{8}$/i.test(text)) {
+                        const res = await fetch(this.rawBindUrl(text.toLowerCase()) + `?t=${Date.now()}`, { cache: 'no-store' });
+                        if (!res.ok) throw new Error(String(res.status));
+                        return await res.json();
+                    }
+                    return { box: text, cidol: text, _plain: true };
+                },
+                // Base64 解码（兼容短码 g########）
+                async importCode() {
+                    const input = prompt("请粘贴导出的代码字符串：");
+                    if (!input || input.trim() === "") return;
+                    try {
+                        const payload = await this.resolveImportPayload(input);
+                        if (!payload) return;
+                        if (payload._plain) {
+                            let code = "";
+                            try { code = atob(input.trim()); }
+                            catch (e) { alert("请检查代码：无效的格式"); return; }
+                            if (this.applyBoxRaw(code)) alert("数据继承成功！");
+                            return;
+                        }
+                        if (payload.box) {
+                            let code = "";
+                            try { code = atob(String(payload.box).trim()); }
+                            catch (e) { alert("请检查代码：无效的格式"); return; }
+                            if (!this.applyBoxRaw(code)) return;
+                        }
+                        if (payload.cidol) {
+                            let code = "";
+                            try { code = atob(String(payload.cidol).trim()); }
+                            catch (e) { /* ignore cidol if absent/invalid */ code = ""; }
+                            if (code) this.applyCidolRaw(code);
+                        }
+                        alert("数据继承成功！");
+                    } catch (e) {
+                        alert(e && e.message ? e.message : String(e));
+                    }
                 },
 
                 saveToLocal() {
@@ -643,41 +669,35 @@
                     localStorage.setItem(STORAGE_KEY, JSON.stringify(storage));
                 },
                 resetData() { if (confirm("确定重置？")) { this.cards.forEach(c => c.breakLevel = -1); this.saveToLocal(); } },
-                importCidolCode() {
+                async importCidolCode() {
                     const input = prompt("请粘贴导出的角色皮肤代码字符串：");
                     if (!input || input.trim() === "") return;
-
-                    let code = "";
                     try {
-                        code = atob(input.trim());
-                    } catch (e) {
-                        alert("请检查代码：无效的 Base64 格式");
-                        return;
-                    }
-
-                    const items = code.split(',').map(item => item.trim()).filter(Boolean);
-                    const updates = [];
-
-                    for (const item of items) {
-                        const parts = item.split('-');
-                        if (parts.length !== 3) { alert("请检查代码：格式不正确"); return; }
-
-                        const [character, rarity, id] = parts;
-                        const paddedId = id.padStart(3, '0');
-                        const target = this.cidolSkins.find(s => s.character === character && s.rarity === rarity && s.id === paddedId);
-
-                        if (!target) {
-                            alert(`请检查代码：角色皮肤 ${character}-${rarity}-${paddedId} 不存在`);
+                        const payload = await this.resolveImportPayload(input);
+                        if (!payload) return;
+                        if (payload._plain) {
+                            let code = "";
+                            try { code = atob(input.trim()); }
+                            catch (e) { alert("请检查代码：无效的 Base64 格式"); return; }
+                            if (this.applyCidolRaw(code)) alert("角色皮肤数据继承成功！");
                             return;
                         }
-
-                        updates.push(target);
+                        if (payload.cidol) {
+                            let code = "";
+                            try { code = atob(String(payload.cidol).trim()); }
+                            catch (e) { alert("请检查代码：无效的 Base64 格式"); return; }
+                            if (!this.applyCidolRaw(code)) return;
+                        }
+                        if (payload.box) {
+                            let code = "";
+                            try { code = atob(String(payload.box).trim()); }
+                            catch (e) { code = ""; }
+                            if (code) this.applyBoxRaw(code);
+                        }
+                        alert("角色皮肤数据继承成功！");
+                    } catch (e) {
+                        alert(e && e.message ? e.message : String(e));
                     }
-
-                    this.cidolSkins.forEach(s => s.owned = false);
-                    updates.forEach(s => s.owned = true);
-                    this.saveCidolToLocal();
-                    alert("角色皮肤数据继承成功！");
                 },
                 resetCidolData() {
                     if (confirm("确定清空角色皮肤数据？")) {
@@ -818,17 +838,14 @@
                 getGithubToken() {
                     return (localStorage.getItem('gakuen_bind_github_token') || '').trim();
                 },
-                promptGithubToken() {
-                    const cur = this.getGithubToken();
-                    const next = prompt(
-                        '粘贴 GitHub Token（需 contents:write，仅保存在本机浏览器）。\n留空则清除。\n公有仓库查询短码不需要 Token。',
-                        cur
-                    );
-                    if (next === null) return;
-                    if (!next.trim()) localStorage.removeItem('gakuen_bind_github_token');
-                    else localStorage.setItem('gakuen_bind_github_token', next.trim());
-                    this.shortStatus = next.trim() ? 'Token 已保存到本机浏览器' : 'Token 已清除';
-                    this.shortError = false;
+                ensureGithubToken() {
+                    let token = this.getGithubToken();
+                    if (token) return token;
+                    const next = prompt('GitHub Token');
+                    if (!next || !next.trim()) return '';
+                    token = next.trim();
+                    localStorage.setItem('gakuen_bind_github_token', token);
+                    return token;
                 },
                 allocShortCode() {
                     const n = Math.floor(Math.random() * 100000000);
@@ -836,6 +853,14 @@
                 },
                 rawBindUrl(code) {
                     return `https://raw.githubusercontent.com/${this.bindRepo}/${this.bindBranch}/${this.bindDir}/${code}.json`;
+                },
+                copyText(text) {
+                    const el = document.createElement('textarea');
+                    el.value = text;
+                    document.body.appendChild(el);
+                    el.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(el);
                 },
                 async githubPutBind(record, token) {
                     const path = `${this.bindDir}/${record.code}.json`;
@@ -848,8 +873,7 @@
                         const info = await getRes.json();
                         sha = info.sha;
                     } else if (getRes.status !== 404) {
-                        const t = await getRes.text();
-                        throw new Error(`读取 GitHub 失败：${getRes.status} ${t}`);
+                        throw new Error(String(getRes.status));
                     }
                     const body = {
                         message: `bind: upsert ${record.code}`,
@@ -866,29 +890,14 @@
                         },
                         body: JSON.stringify(body)
                     });
-                    if (!putRes.ok) {
-                        const t = await putRes.text();
-                        throw new Error(`上传失败：${putRes.status} ${t}`);
-                    }
+                    if (!putRes.ok) throw new Error(String(putRes.status));
                     return putRes.json();
                 },
                 async publishShortCode() {
-                    if (!this.exportString && !this.cidolExportString) {
-                        alert('请先选择支援卡或角色皮肤');
-                        return;
-                    }
-                    const token = this.getGithubToken();
-                    if (!token) {
-                        this.promptGithubToken();
-                        if (!this.getGithubToken()) {
-                            this.shortStatus = '未设置 Token，无法上传到 GitHub';
-                            this.shortError = true;
-                            return;
-                        }
-                    }
+                    if (!this.exportString && !this.cidolExportString) return;
+                    const token = this.ensureGithubToken();
+                    if (!token) return;
                     this.shortBusy = true;
-                    this.shortError = false;
-                    this.shortStatus = '正在上传…';
                     try {
                         let code = this.allocShortCode();
                         for (let i = 0; i < 8; i++) {
@@ -909,47 +918,10 @@
                             repo: this.bindRepo,
                             raw_url: this.rawBindUrl(code)
                         };
-                        await this.githubPutBind(record, this.getGithubToken());
-                        this.shortCode = code;
-                        this.shortStatus = `已上传 GitHub：${this.rawBindUrl(code)}`;
-                        this.shortError = false;
+                        await this.githubPutBind(record, token);
+                        this.copyText(code);
                     } catch (e) {
-                        this.shortStatus = e && e.message ? e.message : String(e);
-                        this.shortError = true;
-                    } finally {
-                        this.shortBusy = false;
-                    }
-                },
-                copyShortCode() {
-                    if (!this.shortCode) return;
-                    const el = document.createElement('textarea');
-                    el.value = this.shortCode;
-                    document.body.appendChild(el);
-                    el.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(el);
-                    this.shortStatus = `已复制 ${this.shortCode}`;
-                    this.shortError = false;
-                },
-                async lookupShortCode() {
-                    const code = (this.shortLookup || '').trim().toLowerCase();
-                    if (!/^g\d{8}$/.test(code)) {
-                        this.shortStatus = '短码格式应为 g + 8 位数字';
-                        this.shortError = true;
-                        return;
-                    }
-                    this.shortBusy = true;
-                    this.shortError = false;
-                    this.shortStatus = '查询中…';
-                    try {
-                        const res = await fetch(this.rawBindUrl(code) + `?t=${Date.now()}`, { cache: 'no-store' });
-                        if (!res.ok) throw new Error(res.status === 404 ? 'GitHub 上没有这个短码' : `查询失败 ${res.status}`);
-                        const data = await res.json();
-                        this.shortCode = data.code || code;
-                        this.shortStatus = `查到：支援卡 ${data.box_count || 0} / 角色 ${data.cidol_count || 0}`;
-                    } catch (e) {
-                        this.shortStatus = e && e.message ? e.message : String(e);
-                        this.shortError = true;
+                        alert(e && e.message ? e.message : String(e));
                     } finally {
                         this.shortBusy = false;
                     }
